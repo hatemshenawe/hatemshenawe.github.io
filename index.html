@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <!-- =====================================================================
      AI Elite Path 2026
-     Build ............ 49
-     File ............. 49 AI Elite Path 2026
-     Date ............. 31 August 2026
-     Status ........... DEPLOYED to elitepath.ae. Dashboard split out to AI-Dashboard-by-Elite-Path.html
-     Previous site .... Elite-Path_59 (kept in Website\source)
-     Contact form ..... formsubmit.co/hatem.shenawe@yahoo.com, cc info@elitepath.ae
+     Build ............ 76
+     File ............. 76 AI Elite Path 2026
+     Date ............. 29 September 2026
+     Status ........... NOT DEPLOYED. Draft for review.
+     Previous site .... Elite-Path_59
+     Contact form ..... formsubmit.co/info@elitepath.ae
      ===================================================================== -->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Elite Path AI — Group Dashboards & AI Audit for UAE Businesses</title>
+<title>CFO, Internal Audit &amp; Tax Solution Powered by AI | Dubai, UAE</title>
 <meta name="description" content="Live dashboards for every level of your group, from the accounting systems you already run, with every transaction checked against UAE law by AI. For UAE groups in any sector.">
-<meta name="version" content="49 AI Elite Path 2026">
-<meta name="build" content="49">
-<meta name="build-date" content="31 August 2026">
+<meta name="version" content="76 AI Elite Path 2026">
+<meta name="build" content="76">
+<meta name="build-date" content="29 September 2026">
 <meta name="keywords" content="group dashboard UAE, AI internal audit Dubai, corporate tax UAE, transfer pricing intercompany UAE, part-time CFO Dubai, multi-entity consolidation UAE, management reporting UAE, board reporting Dubai, group financial reporting">
+<link rel="canonical" href="https://elitepath.ae/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:image" content="https://elitepath.ae/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Elite Path — group finance dashboards for UAE holding groups">
+<meta property="og:site_name" content="Elite Path Business Consultancy">
+<meta property="og:locale" content="en_AE">
+<meta name="twitter:image:alt" content="Elite Path — group finance dashboards for UAE holding groups">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai">
 <meta property="og:title" content="Elite Path AI — see your whole group, every morning">
 <meta property="og:description" content="Live dashboards from Chairman to site team, over the systems you already use. Every transaction audited by AI against UAE law. For UAE groups in any sector.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://elitepath.ae/">
-<meta property="og:image" content="https://elitepath.ae/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Elite Path AI — see your whole group, every morning">
 <meta name="twitter:description" content="Live dashboards from Chairman to site team, over the systems you already use. Every transaction audited by AI against UAE law. For UAE groups in any sector.">
 <meta name="twitter:image" content="https://elitepath.ae/og-image.png">
-<link rel="canonical" href="https://elitepath.ae/">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><rect width='24' height='24' rx='6' fill='%23081a36'/><g fill='none' stroke-width='3' stroke-linecap='round'><path d='M6.5 18.5V13' stroke='%23ffffff'/><path d='M12 18.5V9.2' stroke='%23ffffff'/><path d='M17.5 18.5V5.5' stroke='%23caa24e'/></g></svg>">
+<meta property="og:url" content="https://elitepath.ae/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -39,6 +48,7 @@
   --paper-2:#f5f7fb;
   --sand:#fbf7ee;          /* soft gold card wash */
   --navy:#081a36;
+  --head:#14417f;
   --ink:#08111f;
   --ink-2:#4a5a73;
   --ink-3:#7b8aa3;
@@ -53,7 +63,7 @@
   --clear:#0c8049;
   --rule:#e1e7f0;
   --rule-soft:#eef2f8;
-  --maxw:1180px;
+  --maxw:1640px;
   --f-display:"Space Grotesk","Inter",system-ui,sans-serif;
   --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --shadow:0 1px 2px rgba(8,26,54,.04), 0 8px 24px rgba(8,26,54,.05);
@@ -70,24 +80,27 @@ a{color:var(--teal);text-decoration:none}
 a:hover{text-decoration:underline}
 :focus-visible{outline:2px solid var(--teal);outline-offset:3px}
 
-h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;letter-spacing:-.03em;margin:0;color:var(--navy)}
-h1{font-size:clamp(2.35rem,5vw,3.75rem);line-height:1.06}
-h2{font-size:clamp(1.75rem,3.2vw,2.5rem);line-height:1.16;margin-bottom:.5em}
-h3{font-size:1.22rem;line-height:1.3;margin-bottom:.4em;font-weight:600}
-h4{font-family:var(--f-body);font-weight:700;font-size:1rem;line-height:1.4;color:var(--navy)}
+/* type scale — one ladder, used everywhere:
+   hero 4.4 · page title 3.3 · section 2.35 · card 1.3 · label 1.0 (rem, at full width) */
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;letter-spacing:-.03em;margin:0;color:var(--head)}
+h1{font-size:clamp(2.35rem,5.2vw,4.4rem);line-height:1.06}          /* hero only  */
+h2{font-size:clamp(1.65rem,2.9vw,2.35rem);line-height:1.18;margin-bottom:.5em}
+h3{font-size:1.3rem;line-height:1.32;margin-bottom:.4em;font-weight:600}
+h4{font-family:var(--f-body);font-weight:700;font-size:1rem;line-height:1.4;color:var(--head)}
+h5{font-family:var(--f-display);font-weight:700;font-size:.9rem;line-height:1.4;margin:0;color:var(--head)}
 p{margin:0 0 1.05em}
 .lede{font-size:clamp(1.05rem,1.6vw,1.24rem);line-height:1.6;color:var(--ink-2);max-width:60ch}
+.lede b,.lede strong{color:var(--head);font-weight:700}
 .sm{font-size:.94rem;line-height:1.62;color:var(--ink-2)}
 .xs{font-size:.83rem;line-height:1.5;color:var(--ink-3)}
-.tnum{font-variant-numeric:tabular-nums}
 em{color:var(--teal);font-style:normal;font-weight:600}
 
 /* brand gradient headline, as in the wordmark */
-.grad{background:linear-gradient(96deg,#1a5fc0 0%,#123f86 42%,#5d6270 66%,#caa24e 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  -webkit-text-fill-color:transparent}
+.regs i{font-style:normal;color:inherit;opacity:var(--o,1)}
+.h1b{display:block;font-size:.6em;line-height:1.15;margin-top:.12em}
+.h1x{font-size:clamp(2.0rem,3.9vw,3.3rem);line-height:1.08;margin-bottom:.5em}  /* inner page title */
 
-.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+.wrap{max-width:none;margin:0;padding:0 clamp(12px,1.3vw,20px)}
 .sec{padding:76px 0}
 .sec-tight{padding:46px 0}
 .sec-sand{background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
@@ -107,16 +120,10 @@ em{color:var(--teal);font-style:normal;font-weight:600}
 .sec-ink .btn-ghost:hover{background:rgba(255,255,255,.1)}
 .sec-ink .chips span{background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.14);color:#c6d1e2}
 
-/* dot grid, as on the current site */
-.dotgrid{background-image:radial-gradient(circle,#dde5f2 1px,transparent 1px);
-  background-size:24px 24px;
-  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%);
-  mask-image:linear-gradient(180deg,#000 0%,#000 55%,transparent 100%)}
-
 /* ---------- nav ---------- */
 header.top{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);
   backdrop-filter:blur(12px);border-bottom:1px solid var(--rule)}
-.topin{max-width:var(--maxw);margin:0 auto;padding:0 28px;display:flex;align-items:center;
+.topin{max-width:none;margin:0;padding:0 clamp(12px,1.3vw,20px);display:flex;align-items:center;
   justify-content:space-between;min-height:88px;gap:18px}
 .brand{display:flex;align-items:center;gap:13px;text-decoration:none}
 .brand .bt{display:flex;flex-direction:column;line-height:1;gap:5px}
@@ -131,8 +138,6 @@ nav.main a.on{color:var(--navy);border-bottom-color:var(--brass)}
 nav.main a.navcta{background:var(--navy);color:#fff;border:0;border-radius:999px;padding:9px 18px;
   font-weight:600;font-size:.88rem}
 nav.main a.navcta:hover{background:#0f2b52;color:#fff;text-decoration:none}
-.navbtn{display:none;background:none;border:1px solid var(--rule);border-radius:8px;
-  padding:8px 12px;font-family:var(--f-body);font-size:.9rem;cursor:pointer;color:var(--navy)}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-block;background:var(--brass);color:#fff;padding:13px 26px;border:0;
@@ -163,13 +168,21 @@ nav.main a.navcta:hover{background:#0f2b52;color:#fff;text-decoration:none}
 
 /* door cards */
 .doors{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+
+/* "Where would you like to start?" sits centred on the page, with narrower cards.
+   The section drops the asymmetric content gutters so centring is true to the viewport. */
+.midwrap{max-width:1100px;margin-left:auto;margin-right:auto}
+.midwrap .rulehead{text-align:center;max-width:none}
+.midwrap .rulehead:before{left:50%;transform:translateX(-50%)}
+.midwrap .doors{max-width:none}
+@media (min-width:1100px){
+  .sec-mid > .wrap{padding-left:clamp(12px,1.3vw,20px);padding-right:clamp(12px,1.3vw,20px)}
+}
 .door{background:linear-gradient(170deg,#fff 52%,var(--gold-soft));border:1px solid var(--rule);
   border-radius:11px;padding:28px 26px 24px;display:flex;flex-direction:column;gap:8px;
   text-decoration:none;color:inherit;box-shadow:var(--shadow);transition:.18s ease}
-.door:hover{text-decoration:none;transform:translateY(-2px);
-  box-shadow:0 6px 22px rgba(8,26,54,.1);border-color:#d2ddec}
+.door{cursor:default}
 .door .dnum{font-size:.74rem;color:var(--brass-lt);letter-spacing:.12em;font-weight:700}
-.door h3{font-size:1.3rem}
 .door p{margin:0;color:var(--ink-2);font-size:.94rem;line-height:1.58}
 .door .more{margin-top:auto;padding-top:14px;color:var(--teal);font-size:.89rem;font-weight:600}
 
@@ -180,20 +193,6 @@ ul.ticks li{padding:9px 0 9px 26px;border-bottom:1px solid var(--rule-soft);posi
 ul.ticks li:last-child{border-bottom:0}
 ul.ticks li:before{content:"";position:absolute;left:3px;top:17px;width:8px;height:8px;
   border-left:2px solid var(--brass);border-bottom:2px solid var(--brass);transform:rotate(-45deg)}
-
-/* tables */
-table.dt{width:100%;border-collapse:collapse;font-size:.92rem}
-table.dt th{text-align:left;font-weight:700;font-size:.78rem;letter-spacing:.04em;color:var(--ink-3);
-  border-bottom:2px solid var(--brass);padding:9px 10px 9px 0;vertical-align:bottom}
-table.dt td{padding:12px 10px 12px 0;border-bottom:1px solid var(--rule-soft);vertical-align:top;
-  line-height:1.5;color:var(--ink-2)}
-table.dt td strong{color:var(--navy);font-weight:700}
-table.dt tr:last-child td{border-bottom:0}
-.sec-ink table.dt td{color:#c6d1e2;border-bottom-color:rgba(255,255,255,.1)}
-.num{text-align:right;font-variant-numeric:tabular-nums;padding-right:0!important}
-
-.pill{display:inline-block;font-size:.73rem;font-weight:600;padding:3px 9px;
-  border-radius:6px;background:var(--blue-soft);color:var(--teal)}
 
 /* steps */
 .steps{counter-reset:s;display:grid;gap:0;border-top:1px solid var(--rule)}
@@ -210,13 +209,15 @@ table.dt tr:last-child td{border-bottom:0}
   display:flex;flex-direction:column;box-shadow:var(--shadow)}
 .tier.feature{background:linear-gradient(170deg,#fff 45%,var(--blue-soft));
   border-color:#c6d9f5;box-shadow:0 6px 26px rgba(26,95,192,.13)}
-.tier .tprice{font-family:var(--f-display);font-size:1.22rem;margin:14px 0 4px;line-height:1.3;
+.tier .tprice{font-family:var(--f-display);font-size:1.3rem;margin:14px 0 4px;line-height:1.3;
   color:var(--navy);font-weight:700}
 .tier ul.ticks{margin:18px 0 24px}
 .tier .btn{margin-top:auto;text-align:center}
 
 /* form */
-form.contact{display:grid;gap:16px;max-width:560px}
+form.contact{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;max-width:720px}
+form.contact > .f-full,form.contact > button,form.contact > p{grid-column:1 / -1}
+@media (max-width:620px){form.contact{grid-template-columns:1fr}}
 .field{display:grid;gap:6px}
 .field label{font-size:.86rem;font-weight:600;color:var(--navy)}
 .field input,.field select,.field textarea{
@@ -226,28 +227,12 @@ form.contact{display:grid;gap:16px;max-width:560px}
 .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);outline:none;
   box-shadow:0 0 0 3px rgba(26,95,192,.14)}
 
-/* entry points */
-.entry{border-top:1px solid var(--rule);padding-top:20px;position:relative}
-.entry:before{content:"";position:absolute;top:-1px;left:0;width:36px;height:3px;background:var(--teal)}
-.entry .elabel{font-size:.74rem;letter-spacing:.09em;color:var(--teal);display:block;margin-bottom:8px;font-weight:700}
-.entry h3{margin-bottom:.3em}
-.entry p{color:var(--ink-2);font-size:.94rem}
-
-/* targets */
-.targets{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.14);
-  border:1px solid rgba(255,255,255,.14);border-radius:11px;overflow:hidden}
-.tgt{background:rgba(255,255,255,.04);padding:24px 20px}
-.tgt b{font-family:var(--f-display);font-size:1.9rem;color:var(--brass);display:block;line-height:1;
-  font-weight:700;font-variant-numeric:tabular-nums;letter-spacing:-.03em}
-.tgt .tl{display:block;color:#fff;font-size:.94rem;margin:10px 0 5px;font-weight:600}
-.tgt .td{display:block;color:#9dadc4;font-size:.83rem;line-height:1.45}
-
 /* before / after */
 .ba{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .ba > div{background:#fff;border:1px solid var(--rule);border-radius:11px;padding:26px 24px;
   box-shadow:var(--shadow)}
 .ba > div.after{background:linear-gradient(170deg,#fff 42%,var(--gold-soft));border-color:#ead9b6}
-.ba h3{font-size:1.08rem}
+.ba h3{font-size:1.1rem}   /* comparison panel: one step below the card heading */
 .ba ul{list-style:none;padding:0;margin:12px 0 0}
 .ba li{padding:8px 0;border-bottom:1px solid var(--rule-soft);font-size:.93rem;color:var(--ink-2)}
 .ba li:last-child{border-bottom:0}
@@ -257,71 +242,12 @@ form.contact{display:grid;gap:16px;max-width:560px}
 .chips span{font-size:.78rem;background:var(--paper-2);color:var(--ink-2);padding:4px 10px;
   border-radius:6px;border:1px solid var(--rule)}
 
-/* role ladder */
-.ladder{border-top:1px solid var(--rule)}
-.rung{display:grid;grid-template-columns:190px 1fr;gap:28px;padding:24px 0;
-  border-bottom:1px solid var(--rule-soft);align-items:start}
-.rung .rname{font-family:var(--f-display);font-size:1.18rem;line-height:1.28;font-weight:700;color:var(--navy)}
-.rung .rsub{font-size:.77rem;color:var(--brass-lt);display:block;margin-top:4px;font-weight:600}
-.rung p{margin:0 0 10px;color:var(--ink-2);font-size:.94rem}
-
-/* ===== dashboard mock ===== */
-.screen{background:#fff;border:1px solid var(--rule);border-radius:12px;overflow:hidden;
-  box-shadow:0 4px 28px rgba(8,26,54,.09)}
-.screen-top{display:flex;align-items:center;gap:8px;padding:10px 14px;
-  border-bottom:1px solid var(--rule);background:var(--paper-2);flex-wrap:wrap}
-.dotset{display:flex;gap:5px;margin-right:6px}
-.dotset i{width:8px;height:8px;border-radius:50%;background:#d5dde9;display:block}
-.dotset i:first-child{background:#c3cfe0}
-.tabs{display:flex;gap:4px;flex-wrap:wrap}
-.tab{background:transparent;border:1px solid transparent;color:var(--ink-3);font-family:var(--f-body);
-  font-size:.83rem;font-weight:600;padding:6px 13px;border-radius:8px;cursor:pointer;transition:.15s}
-.tab:hover{color:var(--navy)}
-.tab[aria-selected="true"]{background:var(--blue-soft);color:var(--teal);border-color:#c6d9f5}
-.scope{display:flex;gap:0;margin-left:auto;border:1px solid var(--rule);border-radius:8px;
-  overflow:hidden;background:#fff}
-.scope button{background:transparent;border:0;border-right:1px solid var(--rule);color:var(--ink-3);
-  font-family:var(--f-body);font-size:.78rem;font-weight:500;padding:7px 11px;cursor:pointer;transition:.15s}
-.scope button:last-child{border-right:0}
-.scope button:hover{color:var(--navy)}
-.scope button[aria-pressed="true"]{background:var(--gold-soft);color:var(--brass-lt);font-weight:600}
-.screen-bar{display:flex;justify-content:space-between;align-items:baseline;gap:12px;
-  padding:14px 18px;border-bottom:1px solid var(--rule-soft);flex-wrap:wrap}
-.screen-bar b{font-family:var(--f-display);font-size:1.02rem;color:var(--navy);font-weight:700}
-.screen-bar span{font-size:.76rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--rule-soft)}
-.kpi{background:#fff;padding:16px 18px}
-.kpi .kl{font-size:.72rem;color:var(--ink-3);display:block;margin-bottom:6px}
-.kpi .kv{font-family:var(--f-display);font-size:1.4rem;color:var(--navy);font-weight:700;
-  font-variant-numeric:tabular-nums;line-height:1.1;display:block;letter-spacing:-.03em}
-.kpi .kd{font-size:.72rem;margin-top:5px;display:block;font-variant-numeric:tabular-nums}
-.up{color:var(--clear)}.down{color:var(--flag)}.flat{color:var(--ink-3)}
-.exc{border-top:1px solid var(--rule-soft)}
-.excrow{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:baseline;
-  padding:12px 18px;border-bottom:1px solid var(--rule-soft);font-size:.87rem;color:var(--ink-2)}
-.excrow:last-child{border-bottom:0}
-.excrow em{font-style:normal;color:var(--ink-3);font-size:.74rem;white-space:nowrap;font-weight:500}
-.dotf{width:8px;height:8px;border-radius:50%;display:inline-block;margin-top:6px}
-.d-red{background:var(--flag)}
-.d-amb{background:var(--brass)}
-.d-grn{background:var(--clear)}
-.reports{display:flex;gap:7px;flex-wrap:wrap;padding:14px 18px;border-top:1px solid var(--rule-soft);
-  background:var(--paper-2)}
-.reports span{font-size:.76rem;color:var(--ink-2);background:#fff;border:1px solid var(--rule);
-  padding:5px 11px;border-radius:6px}
-.reports b{font-size:.72rem;color:var(--ink-3);font-weight:600;align-self:center;margin-right:4px}
-.bars{display:flex;align-items:flex-end;gap:6px;height:70px;padding:18px 18px 0}
-.bars i{flex:1;background:#dbe6f7;display:block;border-radius:3px 3px 0 0}
-.bars i.hi{background:var(--brass)}
-.barlabels{display:flex;gap:6px;padding:6px 18px 16px}
-.barlabels span{flex:1;text-align:center;font-size:.64rem;color:var(--ink-3)}
-
 /* ===== systems / connection diagram ===== */
 .stack{display:grid;gap:0}
 .stack-label{font-size:.75rem;letter-spacing:.09em;font-weight:700;color:var(--ink-3);margin-bottom:14px}
 .srcgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .src{background:#fff;border:1px solid var(--rule);border-radius:11px;padding:16px;box-shadow:var(--shadow)}
-.src h5{font-family:var(--f-display);font-size:.92rem;color:var(--navy);margin:0 0 10px;font-weight:700;
+.src h5{font-family:var(--f-display);font-size:.9rem;color:var(--head);margin:0 0 10px;font-weight:700;
   display:flex;align-items:center;gap:8px}
 .src h5 i{width:9px;height:9px;border-radius:3px;background:var(--brass);flex:0 0 9px}
 .src .tags{display:flex;flex-wrap:wrap;gap:6px}
@@ -343,7 +269,7 @@ form.contact{display:grid;gap:16px;max-width:560px}
 .outgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .out{background:linear-gradient(170deg,#fff 45%,var(--gold-soft));border:1px solid var(--rule);
   border-radius:11px;padding:16px;box-shadow:var(--shadow)}
-.out h5{font-family:var(--f-display);font-size:.9rem;color:var(--navy);margin:0;font-weight:700}
+.out h5{font-family:var(--f-display);font-size:.9rem;color:var(--head);margin:0;font-weight:700}
 .out p{font-size:.82rem;color:var(--ink-2);margin:6px 0 0;line-height:1.5}
 @media (max-width:900px){
   .srcgrid{grid-template-columns:1fr 1fr}
@@ -355,6 +281,7 @@ form.contact{display:grid;gap:16px;max-width:560px}
 }
 
 .src{--c:var(--brass);--cs:var(--gold-soft)}
+.src.glass{background:linear-gradient(165deg,rgba(255,255,255,.96),rgba(249,251,254,.86))}
 .src h5 i{background:var(--c)}
 .src .tags span{background:var(--cs);border-color:color-mix(in srgb, var(--c) 26%, #ffffff);color:var(--ink-2)}
 .src .tags span.more{background:transparent;border-style:dashed;border-color:var(--c);color:var(--c);font-weight:700}
@@ -362,6 +289,73 @@ form.contact{display:grid;gap:16px;max-width:560px}
 @supports not (color: color-mix(in srgb, red 50%, blue)){
   .src .tags span{border-color:var(--rule)}
 }
+
+/* ===== technological layer : flowing ribbons, glass, glow ===== */
+:root{--wire:#bcd6f7;--wire-2:#d9e8fb;--glow:rgba(26,95,192,.16)}
+.sec,.sec-tight{position:relative;overflow:hidden}
+.sec > .wrap,.sec-tight > .wrap{position:relative;z-index:2}
+
+/* two-tone headlines, the way the reference sets them */
+.tt{color:var(--head)}
+.tt b{color:var(--teal);font-weight:inherit}
+
+/* glass surfaces */
+.glass{background:linear-gradient(160deg,rgba(255,255,255,.94),rgba(233,241,253,.72));
+  border:1px solid rgba(188,214,247,.9);border-radius:14px;
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 10px 34px rgba(8,26,54,.07);
+  transition:transform .22s cubic-bezier(.2,.7,.3,1),box-shadow .22s,border-color .22s}
+.glass:hover{transform:translateY(-3px);border-color:var(--teal);
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset,0 16px 44px rgba(26,95,192,.16)}
+@media (prefers-reduced-motion:reduce){.glass{transition:none}}
+
+/* full-bleed pages: keep blocks left-aligned but stop them stretching on very wide screens */
+.doors,.grid3,.split,.fgrid,.srcgrid{max-width:1800px}
+.rulehead{max-width:1800px}
+
+/* content edges: left aligns with the "Business Consultancy" wordmark (logo 34px + 13px gap),
+   right stops level with the end of the word "Book" in the header button */
+@media (min-width:1100px){
+  .wrap{padding-left:calc(clamp(12px,1.3vw,20px) + 47px);
+        padding-right:calc(clamp(12px,1.3vw,20px) + 117px)}
+  /* the logo mark starts on the same line as the page headings; the Book button stays at the edge */
+  .topin{padding-left:calc(clamp(12px,1.3vw,20px) + 47px)}
+}
+
+/* ===== hero ===== */
+.hero{position:relative;overflow:hidden;display:flex;align-items:center;
+  min-height:calc(100svh - 70px);padding:72px 0 84px;background:#fff}
+@supports not (min-height:100svh){.hero{min-height:calc(100vh - 70px)}}
+.hero:before{content:"";position:absolute;inset:0;z-index:0;
+  background:
+    radial-gradient(980px 640px at 76% 50%, rgba(26,95,192,.10), transparent 64%),
+    radial-gradient(620px 460px at 6% 94%, rgba(202,162,78,.07), transparent 62%),
+    linear-gradient(170deg,#ffffff 0%,#f7f9fd 58%,#ffffff 100%)}
+.hero:after{content:"";position:absolute;inset:0;z-index:0;
+  background-image:radial-gradient(circle,#dde5f2 1px,transparent 1px);
+  background-size:24px 24px;
+  -webkit-mask-image:linear-gradient(180deg,#000 0%,#000 52%,transparent 100%);
+  mask-image:linear-gradient(180deg,#000 0%,#000 52%,transparent 100%)}
+.hero-cv{position:absolute;top:50%;right:clamp(0px,2vw,44px);transform:translateY(-50%);
+  width:min(56vw,860px);height:min(56vw,860px);z-index:1;pointer-events:none}
+.hero > .wrap{position:relative;z-index:2}
+.hero-in{max-width:62ch;margin-left:0}
+.hero h1 .h1b{display:block;font-size:.6em;line-height:1.15;margin-top:.12em;color:var(--head)}
+.hsub{font-size:1rem;line-height:1.62;color:var(--ink-2)}
+.hbtn{display:inline-flex;align-items:center;gap:11px;background:var(--teal);
+  color:#fff;font-family:var(--f-body);font-size:.92rem;font-weight:700;
+  padding:15px 28px;border-radius:9px;text-decoration:none;
+  box-shadow:0 8px 24px rgba(26,95,192,.22);
+  transition:background .16s ease,transform .16s ease,box-shadow .16s ease}
+.hbtn:hover{background:var(--teal-lt);transform:translateY(-2px);
+  box-shadow:0 12px 32px rgba(26,95,192,.3)}
+.hbtn span{transition:transform .16s ease}
+.hbtn:hover span{transform:translateX(4px)}
+@media (max-width:1400px){.hero-cv{opacity:.62}}
+@media (max-width:900px){
+  .hero{min-height:auto;padding:56px 0 68px}
+  .hero-cv{width:126vw;height:126vw;right:-32%;opacity:.34}}
+@keyframes vpin{from{opacity:0;transform:scale(.985) translateY(10px)}to{opacity:1;transform:none}}
 
 /* ===== sequence numbering ===== */
 .numgrid{counter-reset:n}
@@ -371,392 +365,21 @@ form.contact{display:grid;gap:16px;max-width:560px}
   letter-spacing:.09em;color:var(--brass-lt);margin-bottom:9px;line-height:1}
 .epsteps.numgrid > div:before{color:var(--brass);margin-bottom:7px}
 .epsteps.numgrid > div b{margin-bottom:4px}
-.ladder{counter-reset:r}
-.rung > div:first-child:before{counter-increment:r;content:counter(r,decimal-leading-zero);
-  display:block;font-family:var(--f-display);font-size:.74rem;font-weight:700;letter-spacing:.09em;
-  color:var(--brass-lt);margin-bottom:7px;line-height:1}
-
-/* ===== full dashboard demo ===== */
-.dashwrap{max-width:1360px;margin:0 auto;padding:0 28px}
-.dash{display:grid;grid-template-columns:216px 1fr;background:#fff;border:1px solid var(--rule);
-  border-radius:12px;overflow:hidden;box-shadow:0 6px 34px rgba(8,26,54,.11)}
-.dash.fs{position:fixed;inset:0;z-index:300;border-radius:0;max-width:none;overflow:auto;
-  grid-template-rows:1fr}
-body.noscroll{overflow:hidden}
-
-.dash-side{background:var(--navy);padding:18px 0 22px;display:flex;flex-direction:column}
-.side-h{font-size:.67rem;letter-spacing:.13em;color:#7f92ad;font-weight:700;padding:0 18px 12px}
-.rolebtn{display:block;width:100%;text-align:left;background:transparent;border:0;border-left:3px solid transparent;
-  color:#c1cddd;font-family:var(--f-body);font-size:.88rem;font-weight:500;padding:11px 18px;cursor:pointer;
-  transition:.15s;line-height:1.3}
-.rolebtn small{display:block;font-size:.7rem;color:#7f92ad;margin-top:3px;font-weight:400}
-.rolebtn:hover{background:rgba(255,255,255,.06);color:#fff}
-.rolebtn[aria-current="true"]{background:rgba(202,162,78,.16);border-left-color:var(--brass);color:#fff}
-.rolebtn[aria-current="true"] small{color:var(--brass)}
-.side-note{margin-top:auto;padding:16px 18px 0;font-size:.72rem;color:#7f92ad;line-height:1.5;
-  border-top:1px solid rgba(255,255,255,.1);margin-left:18px;margin-right:18px}
-
-.dash-main{min-width:0;display:flex;flex-direction:column}
-.dash-top{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:12px 18px;
-  background:var(--paper-2);border-bottom:1px solid var(--rule)}
-.dash-top .tl{font-size:.68rem;letter-spacing:.1em;color:var(--ink-3);font-weight:700;margin-right:4px}
-.chip{background:#fff;border:1px solid var(--rule);color:var(--ink-2);font-family:var(--f-body);
-  font-size:.78rem;font-weight:500;padding:6px 11px;border-radius:7px;cursor:pointer;transition:.14s;
-  display:inline-flex;align-items:center;gap:6px}
-.chip:hover{border-color:#bcccdf;color:var(--navy)}
-.chip[aria-pressed="true"]{background:var(--gold-soft);border-color:#e0c78c;color:#8a6a1c;font-weight:600}
-.chip s{width:8px;height:8px;border-radius:2px;display:inline-block;text-decoration:none;opacity:.35}
-.chip[aria-pressed="true"] s{opacity:1}
-.chip.allbtn{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:600}
-.chip.allbtn:hover{background:#0f2b52;color:#fff}
-.fsbtn{margin-left:auto;background:#fff;border:1px solid var(--rule);color:var(--navy);
-  font-family:var(--f-body);font-size:.78rem;font-weight:600;padding:6px 13px;border-radius:7px;cursor:pointer}
-.fsbtn:hover{background:var(--blue-soft);border-color:#c6d9f5}
-
-.dpanel{border-top:1px solid var(--rule-soft);padding:18px}
-.dpanel h6{font-family:var(--f-display);font-size:.86rem;color:var(--navy);margin:0 0 12px;font-weight:700;
-  display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.dpanel h6 span{font-size:.72rem;color:var(--ink-3);font-weight:500}
-.dcols{display:grid;grid-template-columns:1.35fr 1fr;gap:0}
-.dcols > div{border-top:1px solid var(--rule-soft);padding:18px}
-.dcols > div + div{border-left:1px solid var(--rule-soft)}
-
-table.dash-t{width:100%;border-collapse:collapse;font-size:.82rem}
-table.dash-t th{text-align:right;font-weight:600;font-size:.7rem;letter-spacing:.03em;color:var(--ink-3);
-  padding:6px 8px 8px;border-bottom:1px solid var(--rule);white-space:nowrap}
-table.dash-t th:first-child{text-align:left;padding-left:0}
-table.dash-t td{text-align:right;padding:8px;border-bottom:1px solid var(--rule-soft);
-  font-variant-numeric:tabular-nums;color:var(--ink-2);white-space:nowrap}
-table.dash-t td:first-child{text-align:left;padding-left:0;color:var(--navy);font-weight:600;white-space:normal}
-table.dash-t tr.tot td{border-top:2px solid var(--navy);border-bottom:0;color:var(--navy);font-weight:700}
-table.dash-t td s{width:8px;height:8px;border-radius:2px;display:inline-block;margin-right:7px;text-decoration:none}
-.neg{color:var(--flag)}
-.pos{color:var(--clear)}
-.tblscroll{overflow-x:auto}
-
-.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:10px}
-.legend span{font-size:.72rem;color:var(--ink-2);display:inline-flex;align-items:center;gap:6px}
-.legend s{width:9px;height:9px;border-radius:2px;display:inline-block;text-decoration:none}
-
-.emptysel{padding:34px 18px;text-align:center;color:var(--ink-3);font-size:.88rem}
-
-@media (max-width:980px){
-  .dash{grid-template-columns:1fr}
-  .dash-side{flex-direction:row;overflow-x:auto;padding:10px;gap:6px;align-items:center}
-  .side-h,.side-note{display:none}
-  .rolebtn{width:auto;white-space:nowrap;border-left:0;border-bottom:3px solid transparent;border-radius:7px;padding:8px 12px}
-  .rolebtn small{display:none}
-  .rolebtn[aria-current="true"]{border-bottom-color:var(--brass)}
-  .dcols{grid-template-columns:1fr}
-  .dcols > div + div{border-left:0}
-  .dashwrap{padding:0 20px}
-}
-
-/* dashboard controls + report list */
-.dash-ctrl{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:12px 18px;
-  border-bottom:1px solid var(--rule);background:#fff}
-.ctl{display:flex;flex-direction:column;gap:5px}
-.ctl span{font-size:.66rem;letter-spacing:.11em;color:var(--ink-3);font-weight:700}
-.ctl select optgroup{font-weight:700;color:var(--ink-3);font-size:.78rem}
-.ctl select{font-family:var(--f-body);font-size:.85rem;font-weight:600;color:var(--navy);
-  border:1px solid var(--rule);border-radius:8px;padding:8px 30px 8px 11px;background:#fff;
-  appearance:none;-webkit-appearance:none;cursor:pointer;min-width:230px;
-  background-image:linear-gradient(45deg,transparent 50%,#7b8aa3 50%),linear-gradient(135deg,#7b8aa3 50%,transparent 50%);
-  background-position:calc(100% - 17px) 55%,calc(100% - 12px) 55%;
-  background-size:5px 5px,5px 5px;background-repeat:no-repeat}
-.ctl select:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,95,192,.14)}
-/* SECTOR selector — draws the eye until it has been used once */
-.ctl.pick > span{color:#8a6a1c}
-.ctl.pick > span i{font-style:normal;margin-left:8px;letter-spacing:0;
-  font-size:.66rem;font-weight:700;color:var(--brass-lt)}
-.ctl.pick select{border-color:var(--brass);animation:epsector 2.8s ease-in-out infinite}
-.ctl.pick select:hover,.ctl.pick select:focus{animation:none;border-color:var(--brass);
-  box-shadow:0 0 0 4px rgba(202,162,78,.26)}
 @keyframes epsector{
   0%,100%{box-shadow:0 0 0 3px rgba(202,162,78,.18)}
   50%    {box-shadow:0 0 0 7px rgba(202,162,78,.04)}}
-@media (prefers-reduced-motion:reduce){
-  .ctl.pick select{animation:none;box-shadow:0 0 0 3px rgba(202,162,78,.2)}}
-.dash-ctrl .fsbtn{margin-left:auto}
-.replist{display:grid;grid-template-columns:1fr 1fr;gap:0 32px}
-.repitem{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:8px 0;
-  border-bottom:1px solid var(--rule-soft);font-size:.84rem;color:var(--ink-2)}
-.repitem b{font-size:.7rem;font-weight:600;color:var(--brass-lt);white-space:nowrap;letter-spacing:.03em}
-@media (max-width:760px){.replist{grid-template-columns:1fr}.ctl select{min-width:0;width:100%}.ctl{flex:1}}
-
-/* three-column drill-down menu */
-.epd-col{background:#f4f7fb;border-right:1px solid var(--rule);display:flex;flex-direction:column;min-height:0}
-.epd-col-h{padding:16px 16px 10px;border-bottom:1px solid var(--rule)}
-.epd-col-h span{display:block;font-size:.62rem;letter-spacing:.14em;color:var(--ink-3);font-weight:700}
-.epd-col-h b{display:block;font-family:var(--f-display);font-size:.86rem;color:var(--navy);
-  font-weight:700;margin-top:4px;line-height:1.25}
-.epd-col-scroll{overflow-y:auto;flex:1;padding:8px}
-.mi2{display:block;width:100%;text-align:left;background:transparent;border:0;border-radius:8px;
-  color:var(--ink-2);font-family:var(--f-body);font-size:.8rem;font-weight:500;padding:8px 10px;
-  cursor:pointer;line-height:1.35;position:relative;
-  transition:background .14s ease,color .14s ease,transform .14s ease}
-.mi2:hover{background:#e8eef7;color:var(--navy);transform:translateX(2px)}
-.mi2[aria-current="true"]{background:var(--gold-soft);color:#8a6a1c;font-weight:700}
-.mi2[aria-current="true"]::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
-  width:3px;height:18px;background:var(--brass);border-radius:0 3px 3px 0}
-.mi2 small{display:block;font-size:.68rem;color:var(--ink-3);font-weight:400;margin-top:2px}
-.mi2 .cd{float:right;font-size:.6rem;font-weight:700;color:var(--ink-3);letter-spacing:.04em;
-  border:1px solid var(--rule);border-radius:4px;padding:1px 5px;background:#fff;margin-left:8px}
-.mi2.aud{color:var(--flag)}
-.mi2.aud .cd{color:var(--flag);border-color:#f0cfcb;background:#fdf4f3}
-.msec{font-size:.6rem;letter-spacing:.14em;color:#61789a;font-weight:700;padding:14px 16px 5px}
-.epd-rail.col1 .rolebtn2{font-size:.83rem}
-.crumbs{font-size:.68rem;letter-spacing:.06em;color:var(--ink-3);font-weight:600;margin-bottom:5px}
-.crumbs b{color:var(--brass-lt);font-weight:700}
-.rep-r.hit{background:var(--gold-soft);animation:epflash 1.4s ease-out}
 @keyframes epflash{0%{background:#f6e6c2}100%{background:var(--gold-soft)}}
-@media (max-width:560px){.epd-back{padding:10px 12px}.backbtn .esc{display:none}}
-
-.epd-rail-h b{display:block;font-family:var(--f-display);font-size:.86rem;color:#fff;font-weight:700;
-  margin-top:4px;letter-spacing:-.02em;line-height:1.25}
-.uplvl{display:block;width:100%;text-align:left;background:rgba(255,255,255,.07);border:0;
-  border-radius:8px;color:#c1cddd;font-family:var(--f-body);font-size:.76rem;font-weight:700;
-  padding:8px 12px;margin:0 0 8px;cursor:pointer;transition:background .14s ease,transform .14s ease}
-.uplvl:hover{background:rgba(202,162,78,.22);color:#fff;transform:translateX(-2px)}
-.chev{float:right;font-size:.68rem;font-weight:700;color:var(--brass);margin-left:8px;opacity:.9}
-.rolebtn2[aria-current="true"] .chev{color:var(--brass)}
-.mi2 .chev{color:var(--brass-lt)}
-.mi-empty{font-size:.78rem;color:var(--ink-3);line-height:1.5;padding:10px;margin:0}
-
-/* focus: each step back in the chain fades further, but nothing disappears */
-.epd-inner .col1,.epd-inner .col2{transition:opacity .3s ease,filter .3s ease}
-.epd-inner.foc1 .col1{opacity:.42;filter:saturate(.45)}
-.epd-inner.foc2 .col1{opacity:.24;filter:saturate(.25)}
-.epd-inner.foc2 .col2{opacity:.48;filter:saturate(.5)}
-/* a report is a full screen of its own — the person's menu and dashboard both close */
-.epd-inner.foc3 .col1,.epd-inner.foc3 .col2{opacity:0;pointer-events:none;
-  border-right-width:0;overflow:hidden}
-.epd-inner.foc1 .col1:hover,.epd-inner.foc2 .col1:hover,.epd-inner.foc2 .col2:hover{opacity:1;filter:none}
-
-/* back bar — sticky, always reachable */
-.epd-back{position:sticky;top:0;z-index:6;display:flex;align-items:center;gap:12px;flex-wrap:wrap;
-  padding:10px 20px;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
-  border-bottom:1px solid var(--rule)}
-.backbtn{background:var(--brass);border:1px solid var(--brass);color:#fff;font-family:var(--f-body);
-  font-size:.86rem;font-weight:700;padding:10px 18px;border-radius:9px;cursor:pointer;
-  display:inline-flex;align-items:center;gap:9px;white-space:nowrap;
-  box-shadow:0 2px 10px rgba(202,162,78,.34);
-  transition:background .14s ease,transform .14s ease,box-shadow .14s ease}
-.backbtn:hover{background:var(--brass-lt);transform:translateX(-3px);box-shadow:0 4px 16px rgba(202,162,78,.42)}
-.backbtn .arw{font-size:1.05rem;line-height:1;margin-top:-1px}
-.backbtn .esc{font-size:.64rem;font-weight:600;opacity:.8;border:1px solid rgba(255,255,255,.45);
-  border-radius:4px;padding:1px 5px}
-.crumbs{font-size:.74rem;letter-spacing:.02em;color:var(--ink-3);font-weight:600;margin:0}
-.crumbs a{color:var(--teal);cursor:pointer;text-decoration:none;padding:2px 4px;border-radius:5px}
-.crumbs a:hover{background:var(--blue-soft);text-decoration:none}
-.crumbs b{color:var(--navy);font-weight:700}
-
-/* report view */
-.repmeta{display:flex;gap:10px;flex-wrap:wrap;align-items:center;padding:12px 16px;background:#f6f8fc;
-  border:1px solid var(--rule);border-radius:11px;font-size:.8rem;color:var(--ink-2)}
-.repmeta b{color:var(--navy)}
-.repmeta .sp{flex:1}
-.repbody h4{font-family:var(--f-display);font-size:1rem;color:var(--navy);margin:0 0 4px}
-.repbody .rnote{font-size:.8rem;color:var(--ink-3);margin:0 0 14px}
-@media (prefers-reduced-motion:reduce){.epd-inner,.epd-inner .col1,.epd-inner .col2{transition:none}}
-
-/* header stretches edge to edge while the dashboard is open */
-header.top.wide .topin{max-width:none;padding-left:clamp(14px,2vw,30px);padding-right:clamp(14px,2vw,30px)}
-header.top.wide nav.main{margin-left:auto}
-@media (max-width:900px){header.top.wide nav.main{margin-left:0}}
-
-/* ===================== PRODUCT DASHBOARD ===================== */
-.epd{--rail:268px;background:#fff;border-bottom:1px solid var(--rule);
-  padding:0 clamp(10px,2vw,26px) clamp(14px,2vw,26px)}
-.epd-inner{display:grid;gap:0;
-  border:1px solid var(--rule);border-radius:14px;overflow:hidden;
-  box-shadow:0 8px 40px rgba(8,26,54,.09);min-height:calc(100vh - 130px)}
-.epd.fs{position:fixed;inset:0;z-index:400;padding:0;overflow:auto}
-.epd.fs .epd-inner{border-radius:0;border:0;min-height:100vh}
-body.noscroll{overflow:hidden}
-
-/* left rail */
-.epd-rail{background:var(--navy);display:flex;flex-direction:column;min-height:0}
-.epd-rail-h{padding:18px 18px 10px;font-size:.64rem;letter-spacing:.14em;color:#7f92ad;font-weight:700}
-.epd-rail-scroll{overflow-y:auto;flex:1;padding-bottom:16px}
-.epd-grp{font-size:.6rem;letter-spacing:.14em;color:#61789a;font-weight:700;
-  padding:16px 18px 6px;color:#61789a}
-.rolebtn2{display:block;width:100%;text-align:left;background:transparent;border:0;
-  border-left:3px solid transparent;color:#c1cddd;font-family:var(--f-body);font-size:.85rem;
-  font-weight:500;padding:9px 16px;cursor:pointer;line-height:1.3;
-  transition:background .14s ease,color .14s ease,transform .14s ease}
-.rolebtn2 small{display:block;font-size:.68rem;color:#7f92ad;margin-top:2px;font-weight:400}
-.rolebtn2:hover{background:rgba(255,255,255,.06);color:#fff;transform:translateX(2px)}
-.rolebtn2[aria-current="true"]{background:rgba(202,162,78,.17);border-left-color:var(--brass);color:#fff}
-.rolebtn2[aria-current="true"] small{color:var(--brass)}
-.epd-rail-foot{padding:14px 18px;border-top:1px solid rgba(255,255,255,.1);
-  font-size:.7rem;color:#7f92ad;line-height:1.5}
-
-/* main */
-.epd-main{min-width:0;display:flex;flex-direction:column;background:#fbfcfe}
-.epd-ctrl{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap;padding:12px 20px;
-  background:#fff;border-bottom:1px solid var(--rule)}
-.epd-chips{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:11px 20px;
-  background:#f6f8fc;border-bottom:1px solid var(--rule)}
-.epd-bar{display:flex;justify-content:space-between;align-items:baseline;gap:14px;
-  padding:16px 20px 12px;flex-wrap:wrap}
-.epd-bar h3{margin:0;font-size:1.24rem}
-.epd-bar .sub{font-size:.76rem;color:var(--ink-3);font-variant-numeric:tabular-nums}
-.epd-tag{display:inline-block;font-size:.63rem;letter-spacing:.1em;font-weight:700;padding:3px 9px;
-  border-radius:5px;background:var(--blue-soft);color:var(--teal);margin-left:10px;vertical-align:middle}
-.epd-body{padding:0 20px 22px;display:flex;flex-direction:column;gap:16px}
-.fade{animation:epfade .22s ease-out both}
 @keyframes epfade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
-
-.epd-kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);
-  border:1px solid var(--rule);border-radius:11px;overflow:hidden}
-.epd-kpi{background:#fff;padding:15px 16px}
-.epd-kpi .kl{font-size:.7rem;color:var(--ink-3);display:block;margin-bottom:6px}
-.epd-kpi .kv{font-family:var(--f-display);font-size:1.34rem;color:var(--navy);font-weight:700;
-  font-variant-numeric:tabular-nums;line-height:1.12;display:block;letter-spacing:-.03em}
-.epd-kpi .kd{font-size:.7rem;margin-top:4px;display:block;font-variant-numeric:tabular-nums}
-
-.epd-two{display:grid;grid-template-columns:1.5fr 1fr;gap:16px}
-.card{background:#fff;border:1px solid var(--rule);border-radius:11px;padding:16px 18px}
-.card h6{font-family:var(--f-display);font-size:.85rem;color:var(--navy);margin:0 0 12px;font-weight:700;
-  display:flex;justify-content:space-between;align-items:baseline;gap:10px}
-.card h6 span{font-size:.71rem;color:var(--ink-3);font-weight:500}
-
-.att{display:grid;grid-template-columns:auto 1fr auto;gap:12px;align-items:baseline;
-  padding:9px 0;border-bottom:1px solid var(--rule-soft);font-size:.83rem;color:var(--ink-2);
-  animation:epfade .3s ease-out both}
-.att:last-child{border-bottom:0}
-.att em{font-style:normal;color:var(--ink-3);font-size:.71rem;white-space:nowrap;font-weight:500}
-.att s{width:7px;height:7px;border-radius:50%;display:inline-block;margin-top:6px;text-decoration:none}
-
-/* report list */
-.rep-h{display:grid;gap:12px;padding:0 0 8px;border-bottom:1px solid var(--navy);
-  font-size:.68rem;letter-spacing:.04em;color:var(--ink-3);font-weight:700;
-  grid-template-columns:minmax(200px,2.1fr) 74px minmax(120px,1.1fr) 96px 96px 176px}
-.rep-r{display:grid;gap:12px;padding:9px 0;border-bottom:1px solid var(--rule-soft);
-  align-items:center;font-size:.83rem;color:var(--ink-2);transition:background .14s ease;
-  grid-template-columns:minmax(200px,2.1fr) 74px minmax(120px,1.1fr) 96px 96px 176px;
-  animation:epfade .3s ease-out both}
-.rep-r:hover{background:#f6f8fc}
-.rep-r .rn{color:var(--navy);font-weight:600}
-.rep-r .rt{font-variant-numeric:tabular-nums;font-size:.78rem;color:var(--ink-3)}
-.cad{font-size:.65rem;font-weight:700;letter-spacing:.04em;padding:3px 8px;border-radius:5px;
-  background:var(--paper-2);color:var(--ink-2);border:1px solid var(--rule);text-align:center}
-.cad.D{background:#eaf2fe;color:#1a5fc0;border-color:#cfe0fb}
-.cad.W{background:#e8f5f2;color:#0c7b78;border-color:#c9e8e3}
-.cad.M{background:#fbf5e6;color:#8a6a1c;border-color:#eddfbe}
-.cad.Q{background:#f2eefc;color:#5b41a8;border-color:#ded3f4}
-.cad.A{background:#f1f4f9;color:#4a5a73;border-color:#dde3ed}
-.rep-r.audit{background:#fdf4f3}
-.rep-r.audit .rn{color:var(--flag)}
-.rep-r.audit:hover{background:#fbeceb}
-.rep-r.failed .rt.sent{color:var(--flag);font-weight:700}
-.rbtn{background:#fff;border:1px solid var(--rule);color:var(--navy);font-family:var(--f-body);
-  font-size:.71rem;font-weight:600;padding:5px 9px;border-radius:6px;cursor:pointer;
-  transition:background .14s ease,transform .14s ease,border-color .14s ease;white-space:nowrap}
-.rbtn:hover{background:var(--blue-soft);border-color:#c6d9f5;transform:translateY(-1px)}
-.rbtn.gold:hover{background:var(--gold-soft);border-color:#e0c78c}
-.racts{display:flex;gap:6px;flex-wrap:wrap}
-.audit-note{font-size:.8rem;color:var(--ink-2);padding:8px 0 0}
-.audit-note b{color:var(--flag)}
-.recip-edit{grid-column:1/-1;display:flex;gap:8px;align-items:center;padding:8px 0 4px;flex-wrap:wrap}
-.recip-edit input{flex:1;min-width:220px;font-family:var(--f-body);font-size:.8rem;padding:7px 10px;
-  border:1px solid var(--rule);border-radius:6px;color:var(--ink)}
-.recip-edit input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(26,95,192,.13)}
-
-/* email panel */
-.mail{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
-.mailc{background:#f6f8fc;border:1px solid var(--rule);border-radius:9px;padding:12px 14px}
-.mailc b{display:block;font-size:.72rem;color:var(--navy);font-weight:700;margin-bottom:6px}
-.mailc p{margin:0 0 4px;font-size:.76rem;color:var(--ink-2);line-height:1.45}
-.mailc .nx{font-size:.72rem;color:var(--brass-lt);font-weight:600;font-variant-numeric:tabular-nums}
-.subj{font-size:.76rem;color:var(--ink-3);padding-top:10px;line-height:1.6}
-.subj code{background:#f1f4f9;border:1px solid var(--rule);border-radius:4px;padding:1px 5px;
-  font-size:.72rem;color:var(--navy)}
-
-.toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(10px);
-  background:var(--navy);color:#fff;font-size:.83rem;padding:11px 18px;border-radius:9px;
-  box-shadow:0 8px 30px rgba(8,26,54,.28);opacity:0;pointer-events:none;
-  transition:opacity .2s ease,transform .2s ease;z-index:500}
-.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
-
-@media (max-width:1320px){
-  .epd-two{grid-template-columns:1fr}
-  .epd-kpis{grid-template-columns:1fr 1fr 1fr}
-}
-@media (max-width:768px){.epd-kpis{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){
-  .epd{padding:0 8px 12px}
-  .epd-kpis{grid-template-columns:1fr}
-  .epd-body{padding:0 12px 16px}
-  .epd-ctrl,.epd-chips,.epd-bar{padding-left:12px;padding-right:12px}
-}
-@media (prefers-reduced-motion:reduce){
-  .fade,.att,.rep-r{animation:none!important}
-  .rolebtn2,.rbtn,.rep-r,.chip{transition:none!important}
-  .rolebtn2:hover,.rbtn:hover{transform:none}
-}
-
-.repmeta .shr{font-size:.72rem;font-weight:700;color:#5b41a8;background:#f2eefc;border:1px solid #ded3f4;
-  border-radius:6px;padding:3px 9px}
-.shrdot{display:inline-block;font-size:.6rem;font-weight:700;letter-spacing:.04em;color:#5b41a8;
-  background:#f2eefc;border:1px solid #ded3f4;border-radius:4px;padding:1px 6px;margin-left:8px;
-  vertical-align:middle}
-.seg{display:inline-flex;border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff}
-.seg button{background:transparent;border:0;border-right:1px solid var(--rule);color:var(--ink-3);
-  font-family:var(--f-body);font-size:.75rem;font-weight:600;padding:6px 12px;cursor:pointer}
-.seg button:last-child{border-right:0}
-.seg button.on{background:var(--gold-soft);color:#8a6a1c;font-weight:700}
-.seg button:hover{color:var(--navy)}
-.tagsum{font-family:var(--f-body);font-size:.62rem;font-weight:700;letter-spacing:.06em;color:#8a6a1c;
-  background:var(--gold-soft);border:1px solid #e0c78c;border-radius:5px;padding:2px 7px;vertical-align:middle}
-.tagsum.det{color:var(--teal);background:var(--blue-soft);border-color:#c6d9f5}
-
-.rep-r .rt .src{display:block;font-size:.66rem;font-weight:700;color:var(--teal);letter-spacing:.02em;margin-top:2px}
-.srcbar{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;margin-top:14px;
-  background:var(--rule);border:1px solid var(--rule);border-radius:11px;overflow:hidden}
-.srcbar span{background:#fff;padding:12px 14px;font-size:.84rem;color:var(--navy);font-weight:600}
-.srcbar i{display:block;font-style:normal;font-size:.64rem;letter-spacing:.11em;color:var(--ink-3);
-  font-weight:700;margin-bottom:5px}
-
-/* ===== dashboard grid : defined last so nothing overrides it ===== */
-.col2{display:none}                       /* the team column was a duplicate of the menu */
-.col1{display:none}                       /* every position now lives in the ROLE selector */
-.epd-inner{grid-template-columns:250px 1fr;
-  transition:grid-template-columns .3s cubic-bezier(.4,0,.2,1)}
-.leafnote{font-size:.76rem;color:var(--ink-3);margin:5px 0 0}
-@media (max-width:1500px){.epd-inner{grid-template-columns:228px 1fr}}
-@media (max-width:1320px){
-  .epd-inner{grid-template-columns:1fr;grid-template-rows:auto 1fr}
-  .epd-rail.col1,.epd-col{border-right:0;border-bottom:1px solid var(--rule);min-height:0;max-height:none}
-  .epd-rail.col1{background:var(--navy)}
-  .epd-rail-h,.epd-col-h{padding:9px 16px 4px;border-bottom:0}
-  .epd-rail-h b,.epd-col-h b{display:inline;margin:0 0 0 8px}
-  .epd-col-h{display:flex;align-items:baseline;gap:8px}
-  .epd-rail-foot{display:none}
-  .epd-rail-scroll,.epd-col-scroll{display:flex;flex-direction:row;flex-wrap:nowrap;gap:6px;
-    overflow-x:auto;overflow-y:hidden;padding:4px 12px 12px;align-items:stretch}
-  .rolebtn2,.mi2,.uplvl{width:auto;max-width:230px;white-space:nowrap;overflow:hidden;
-    text-overflow:ellipsis;border-left:0;border-radius:8px;padding:8px 13px;flex:0 0 auto;margin:0}
-  .rolebtn2 small,.mi2 small{display:none}
-  .mi2[aria-current="true"]::before,.rolebtn2[aria-current="true"]::before{display:none}
-  .rolebtn2[aria-current="true"]{background:rgba(202,162,78,.24)}
-  .epd-inner.foc1 .col1,.epd-inner.foc2 .col1,.epd-inner.foc2 .col2{opacity:1}
-  .epd-inner.foc3 .col1,.epd-inner.foc3 .col2{display:none}
-  .epd-two{grid-template-columns:1fr}
-  .epd-kpis{grid-template-columns:1fr 1fr 1fr}
-}
-@media (max-width:768px){.epd-kpis{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){
-  .epd-kpis{grid-template-columns:1fr}
-  .epd-back{padding:10px 12px}.backbtn .esc{display:none}
-}
 
 /* footer */
 footer{background:var(--navy);color:#a8b7cc;padding:56px 0 30px;font-size:.9rem}
 footer h4{color:#fff;margin-bottom:12px;font-size:.9rem}
 footer a{color:var(--brass)}
 footer .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:34px}
+footer .flinks{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;padding-top:22px;
+  border-top:1px solid rgba(255,255,255,.14)}
+footer .flinks a{color:#cdd8e8;font-size:.88rem;text-decoration:none}
+footer .flinks a:hover{color:var(--brass);text-decoration:underline}
 footer ul{list-style:none;padding:0;margin:0}
 footer li{padding:4px 0}
 .fbase{border-top:1px solid rgba(255,255,255,.13);margin-top:38px;padding-top:20px;display:flex;
@@ -769,38 +392,120 @@ footer li{padding:4px 0}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .hero-a{animation:rise .7s cubic-bezier(.2,.7,.3,1) both}
 .hero-b{animation:rise .7s cubic-bezier(.2,.7,.3,1) .12s both}
-.hero-c{animation:rise .8s cubic-bezier(.2,.7,.3,1) .24s both}
 @media (prefers-reduced-motion:reduce){
-  .hero-a,.hero-b,.hero-c{animation:none}
+  .hero-a,.hero-b{animation:none}
   html{scroll-behavior:auto}
 }
 
 @media (max-width:900px){
   .grid2,.split,.grid3,.grid4,.doors,.tiers,.ba{grid-template-columns:1fr}
-  .kpis,.targets{grid-template-columns:1fr 1fr}
-  .rung{grid-template-columns:1fr;gap:10px}
   footer .fgrid{grid-template-columns:1fr 1fr}
   .sec{padding:54px 0}
-  .scope{margin-left:0;width:100%}
-  .scope button{flex:1}
-  nav.main{display:none;position:absolute;top:88px;left:0;right:0;background:#fff;
-    border-bottom:1px solid var(--rule);flex-direction:column;align-items:flex-start;gap:0;
-    padding:8px 28px 18px;box-shadow:0 10px 24px rgba(8,26,54,.08)}
-  nav.main.open{display:flex}
-  nav.main a{padding:11px 0;width:100%;border-bottom:1px solid var(--rule-soft)}
-  nav.main a.navcta{text-align:center;margin-top:10px;border-bottom:0}
-  .navbtn{display:block}
+  nav.main{display:flex;position:static;background:none;border:0;padding:0;box-shadow:none}
+  nav.main a.navcta{padding:8px 15px;font-size:.84rem}
   .step{grid-template-columns:44px 1fr;gap:14px}
+  .doors{grid-template-columns:1fr}
 }
 @media (max-width:560px){
   body{font-size:16px}
   .wrap{padding:0 20px}
   .topin{padding:0 20px}
-  .kpis{grid-template-columns:1fr 1fr}
-  .targets{grid-template-columns:1fr}
   footer .fgrid{grid-template-columns:1fr}
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": [
+    "ProfessionalService",
+    "Organization"
+   ],
+   "@id": "https://elitepath.ae/#org",
+   "name": "Elite Path Business Consultancy",
+   "url": "https://elitepath.ae/",
+   "logo": "https://elitepath.ae/og-image.png",
+   "image": "https://elitepath.ae/og-image.png",
+   "email": "info@elitepath.ae",
+   "description": "Outsourced CFO services, AI internal audit and Corporate Tax for UAE holding groups. Live dashboards built on the accounting systems the client already runs.",
+   "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+   },
+   "areaServed": [
+    {
+     "@type": "Country",
+     "name": "United Arab Emirates"
+    }
+   ],
+   "knowsAbout": [
+    "UAE Corporate Tax",
+    "Transfer pricing",
+    "VAT",
+    "IFRS 15",
+    "Group consolidation",
+    "Internal audit",
+    "RERA escrow audit",
+    "Free zone qualifying income"
+   ],
+   "availableLanguage": [
+    "en",
+    "ar"
+   ],
+   "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services",
+    "itemListElement": [
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "CFO Services",
+       "description": "Group consolidation, month-end close oversight, cash and covenant watch, and a board pack drafted from live data."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Internal Audit — Powered by AI",
+       "description": "Every transaction tested every night rather than a sample once a year, with findings raised while they can still be reversed."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Tax Management — Powered by AI",
+       "description": "UAE Corporate Tax, VAT, transfer pricing and free zone qualifying income monitored through the year."
+      }
+     },
+     {
+      "@type": "Offer",
+      "itemOffered": {
+       "@type": "Service",
+       "name": "Financial Advisory",
+       "description": "Due diligence, valuation, group restructuring and raising debt or equity."
+      }
+     }
+    ]
+   }
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://elitepath.ae/#site",
+   "url": "https://elitepath.ae/",
+   "name": "Elite Path Business Consultancy",
+   "publisher": {
+    "@id": "https://elitepath.ae/#org"
+   },
+   "inLanguage": "en-AE"
+  }
+ ]
+}
+</script>
 </head>
 <body>
 
@@ -814,11 +519,7 @@ footer li{padding:4px 0}
       </svg>
       <span class="bt"><b>Elite Path</b><span class="sub">Business <i>Consultancy</i></span></span>
     </a>
-    <button class="navbtn" id="navbtn" aria-expanded="false" aria-controls="mainnav">Menu</button>
     <nav class="main" id="mainnav">
-      <a href="#solution" data-nav="solution">Solution</a>
-      <a href="#how" data-nav="how">How We Work</a>
-      <a href="#about" data-nav="about">About</a>
       <a href="#contact" class="navcta">Book a Consultation</a>
     </nav>
   </div>
@@ -830,113 +531,69 @@ footer li{padding:4px 0}
 <section class="page" id="page-home">
 
 
-  <div class="sec dotgrid" style="padding-top:72px;padding-bottom:64px">
+  <div class="hero">
+    <canvas class="hero-cv" id="heroCv" aria-hidden="true"></canvas>
     <div class="wrap">
-      <div>
-        <p class="kicker hero-a">For chairmen and boards of UAE groups</p>
-        <h1 class="hero-a grad">Your group, on one screen,<br>before the day starts.</h1>
-        <p class="lede hero-b" style="margin-top:24px;margin-bottom:1.1em;max-width:64ch">
-          Elite Path reads from the current systems you already run and turns them into a live
-          picture of every company you own.
+      <div class="hero-in">
+        <h1 class="hero-a tt"><b>Live Dashboards</b><span class="h1b">Audit by AI.</span></h1>
+        <p class="lede hero-b" style="margin-top:28px;margin-bottom:1.05em;max-width:56ch">
+          A solution for frequent financial reporting deadlines,
+          <b>for better decision making.</b>
         </p>
-        <p class="lede hero-b" style="margin-bottom:0">
-          Nothing moves. Nothing is replaced. Each morning the numbers are already checked
-          against UAE law — and the three things that need your attention are at the top.
+        <p class="lede hero-b" style="margin-bottom:1.05em;max-width:58ch">
+          The problem is not the ERP nor the staff. The problem is that decision makers
+          receive financial data late — and it still needs correcting when it arrives.
+        </p>
+        <p class="hsub hero-b" style="margin-bottom:34px;max-width:60ch">
+          Elite Path gives your organisation audited financial data through live dashboards,
+          aligned with the rules and regulations that govern it —
+          <span class="regs"><i style="--o:1">VAT</i>, <i style="--o:.88">CT</i>,
+          <i style="--o:.76">IFRS</i>, <i style="--o:.62">Transfer Pricing</i>,
+          <i style="--o:.48">Escrow</i>, <i style="--o:.34">DHA</i>,
+          <i style="--o:.20">FTA</i></span>
         </p>
         <div class="btnrow hero-b">
-          <a class="btn" href="#contact">Book a group review</a>
-          <a class="btn btn-ghost" href="#contact">Book a walkthrough</a>
-        </div>
-        <p class="xs hero-b" style="margin-top:22px;max-width:46ch">
-          Read-only connection. Your ledger is never written to, and your team keeps working
-          exactly the way they work today.
-        </p>
-      </div>
-
-
-    </div>
-  </div>
-
-  <!-- then / now -->
-  <div class="sec sec-sand">
-    <div class="wrap">
-      <div class="rulehead"><h2 style="margin:0">Two ways to run a group</h2></div>
-      <div class="grid2">
-        <div>
-          <h3 style="color:var(--ink-3)">The way most groups still work</h3>
-          <p class="sm">
-            Seven sets of books in seven places. A consolidation built by hand in a spreadsheet.
-            Intercompany balances that do not agree until someone chases them. Management accounts
-            that arrive six weeks after the month has closed, by which point the decision has
-            already been made without them.
-          </p>
-          <p class="sm">
-            The audit happens once a year, on a sample of a few hundred entries out of hundreds
-            of thousands. Whatever it finds is eleven months old.
-          </p>
-        </div>
-        <div>
-          <h3>The way it works with Elite Path</h3>
-          <p class="sm">
-            The same seven sets of books, untouched. Overnight, every entry across every entity
-            is read, matched, eliminated and tested. By six in the morning the group is
-            consolidated and each person opens the view that belongs to their level.
-          </p>
-          <p class="sm">
-            Not a sample — every transaction, every night, measured against UAE Corporate Tax,
-            VAT, transfer pricing and IFRS. When something breaks a rule, the person who can fix
-            it is told the same day.
-          </p>
-          <p class="sm">
-            And it does not stop at reporting. Alerts and notifications run against your own system
-            and stay open until they are dealt with — what is still pending, what needs correcting,
-            what is sitting on someone's approval. Each one goes to the person who can act on it,
-            not into a monthly report nobody opens.
-          </p>
+          <a class="hbtn" href="#contact">Book a Consultation <span aria-hidden="true">&rarr;</span></a>
         </div>
       </div>
     </div>
   </div>
 
   <!-- four doors -->
-  <div class="sec">
+  <div class="sec sec-mid">
     <div class="wrap">
+     <div class="midwrap">
       <div class="rulehead">
-        <h2 style="margin:0">Where would you like to start?</h2>
-        <p class="lede" style="margin-top:12px">
-          Three of these run continuously as one package. The fourth is called on when you need it.
-        </p>
+        <h2 class="tt" style="margin:0"><b>Where would you like</b> to start?</h2>
       </div>
       <div class="doors">
-        <a class="door" href="#solution">
+        <div class="door">
           <span class="dnum">01</span>
           <h3>CFO Services</h3>
-          <p>A finance chief for the group without a finance chief's salary. Close oversight,
-             consolidation, cash and covenant watch, and a board pack that is ready before you ask.</p>
-          <span class="more">What this covers</span>
-        </a>
-        <a class="door" href="#solution">
+          <p>Cash flow, budgeting and forecasting, consolidation across every entity &mdash; read from
+             the systems you already run, shown on live group dashboards, with your finance team
+             supervised, not replaced.</p>
+        </div>
+        <div class="door">
           <span class="dnum">02</span>
           <h3>Internal Audit — Powered by AI</h3>
           <p>Every transaction tested every night, not five percent of them once a year.
              Duplicate payments, self-approvals and unusual postings surface while they can still be reversed.</p>
-          <span class="more">What this covers</span>
-        </a>
-        <a class="door" href="#solution">
+        </div>
+        <div class="door">
           <span class="dnum">03</span>
           <h3>Tax Management — Powered by AI</h3>
           <p>Corporate Tax, VAT, transfer pricing and free zone status monitored as the year runs,
              so nothing is discovered in the week before a filing is due.</p>
-          <span class="more">What this covers</span>
-        </a>
-        <a class="door" href="#solution">
+        </div>
+        <div class="door">
           <span class="dnum">04</span>
           <h3>Financial Advisory</h3>
           <p>A defined piece of work with an end date: buying or selling a company, valuation,
              restructuring, or preparing the group for outside investment.</p>
-          <span class="more">What this covers</span>
-        </a>
+        </div>
       </div>
+     </div>
     </div>
   </div>
 
@@ -946,16 +603,12 @@ footer li{padding:4px 0}
   <div class="sec sec-ink">
     <div class="wrap split">
       <div>
-        <p class="kicker">Seven views, one set of numbers</p>
         <h2>Everyone sees the same truth, cut to their altitude.</h2>
         <p class="lede">
           The chairman does not want forty charts. He wants to know what needs him this week.
           The property manager does not want the group balance sheet. She wants her building's
           arrears. Same data, seven windows into it.
         </p>
-        <div class="btnrow">
-          <a class="btn btn-brass" href="#contact">See it in a live session</a>
-        </div>
       </div>
       <div>
         <ul class="ticks">
@@ -979,10 +632,6 @@ footer li{padding:4px 0}
       </div>
       <div class="split">
         <div>
-          <p class="lede">
-            Plenty of people can set up an automation. Far fewer have closed a set of books, defended
-            the numbers to a board, or sat across the table from an external auditor.
-          </p>
           <p class="sm">
             That difference decides everything. Someone who has done the work knows which step in your
             process is actually causing the problem — and that is the step worth automating. Everything
@@ -1006,27 +655,6 @@ footer li{padding:4px 0}
                the result and stands behind it. That signature is the product.</p>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- targets -->
-  <div class="sec sec-ink">
-    <div class="wrap">
-      <div class="rulehead" style="border-color:var(--rule)">
-        <h2 style="margin:0">What we work towards on every engagement</h2>
-        <p class="lede" style="margin-top:12px">These are the targets we agree with you at the start and
-          measure against. They are goals, not client results. Where we quote a real outcome, we say so.</p>
-      </div>
-      <div class="targets">
-        <div class="tgt"><b>&lt;7 days</b><span class="tl">To close the month</span>
-          <span class="td">Most groups we meet are taking ten to fifteen.</span></div>
-        <div class="tgt"><b>100%</b><span class="tl">Transactions tested</span>
-          <span class="td">The full population, instead of a once-a-year sample.</span></div>
-        <div class="tgt"><b>Ready</b><span class="tl">For the auditor</span>
-          <span class="td">Records kept ready through the year, not built in audit season.</span></div>
-        <div class="tgt"><b>Daily</b><span class="tl">Cash position</span>
-          <span class="td">Every company and every location, in one place.</span></div>
       </div>
     </div>
   </div>
@@ -1070,146 +698,71 @@ footer li{padding:4px 0}
     </div>
   </div>
 
-  <div class="sec">
-    <div class="wrap" style="text-align:center;max-width:720px">
-      <h2>Start with a look, not a contract.</h2>
-      <p class="lede" style="margin:0 auto 8px">
-        Give us read-only access for two weeks. We come back with what your numbers say about
-        your group — and you decide from there.
-      </p>
-      <div class="btnrow" style="justify-content:center">
-        <a class="btn" href="#contact">Request a group review</a>
-        <a class="btn btn-ghost" href="#how">See how we work</a>
+  <div class="sec sec-sand">
+    <div class="wrap">
+      <div class="rulehead"><h2 style="margin:0">Start with a look, not a contract.</h2></div>
+      <div class="grid2">
+        <div>
+          <p class="lede">
+            Give us read-only access for two weeks. We come back with what your numbers say about
+            your group — and you decide from there.
+          </p>
+          <p class="sm" style="margin-top:18px">
+            The most useful first message says how many legal entities you have, what systems they
+            run on, and what you cannot currently see. We reply within one working day.
+          </p>
+          <div style="margin-top:28px">
+            <h4>Elite Path Business Consultancy</h4>
+            <p class="sm" style="margin:6px 0 0">Dubai, United Arab Emirates<br>
+              <a href="mailto:info@elitepath.ae">info@elitepath.ae</a></p>
+          </div>
+        </div>
+        <div>
+        <form class="contact" action="https://formsubmit.co/info@elitepath.ae" method="POST">
+          <input type="hidden" name="_subject" value="Elite Path AI — website enquiry (home page)">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="Sent from" value="Home page">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="field">
+            <label for="hname">Your name</label>
+            <input id="hname" name="Name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="hcompany">Company or group</label>
+            <input id="hcompany" name="Company" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="hemail">Email</label>
+            <input id="hemail" name="Email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="hphone">Phone</label>
+            <input id="hphone" name="Phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field f-full">
+            <label for="hmsg">What can you not currently see?</label>
+            <textarea id="hmsg" name="Message" placeholder="Systems in use, what the group looks like, what triggered the search."></textarea>
+          </div>
+          <button class="btn" type="submit">Send enquiry</button>
+        </form>
+        </div>
       </div>
     </div>
   </div>
 
 </section>
 
+<!-- ============ DASHBOARDS ============ -->
 <!-- ============ REPORTING LINES ============ -->
-<section class="page" id="page-reportinglines">
-  <div class="sec">
-    <div class="wrap">
-      <p class="kicker">Reporting lines</p>
-      <h1>Every position, and the reports it holds.</h1>
-      <p class="lede" style="margin-top:20px">The full structure behind the dashboard. Twenty-eight
-        positions across an eight-company group, each with ten to twelve reports and exactly one audit
-        report. We walk through it live in a working session.</p>
-    </div>
-  </div>
-  <div class="sec">
-    <div class="wrap">
-      <div class="rulehead">
-        <h2 style="margin:0">The finance function, and who owns each part</h2>
-        <p class="lede" style="margin-top:12px">Thirteen domains. Every one has a named owner, a source
-          system and a report that carries it upward. Nothing is left to whoever has time.</p>
-      </div>
-      <div class="tblscroll">
-      <table class="dt" style="min-width:820px">
-        <thead><tr><th style="width:22%">Responsibility</th><th style="width:26%">Owned by</th>
-          <th style="width:22%">Systems</th><th>Rolls up into</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Treasury and cash</strong></td><td>Treasury Accountant</td>
-            <td class="xs">PACT · bank portals · Noqodi</td><td>Group cash and bank position</td></tr>
-          <tr><td><strong>Escrow and project funds</strong></td><td>Escrow &amp; Project Funds Accountant</td>
-            <td class="xs">Escrow portals · RERA · Oqood · DLD</td><td>Progressive billing and certificates</td></tr>
-          <tr><td><strong>Sales, billing and collections</strong></td><td>Receivables &amp; Collections Accountant</td>
-            <td class="xs">PACT · Oqood · TAS</td><td>Progressive billing and certificates</td></tr>
-          <tr><td><strong>Broker and commission</strong></td><td>Receivables &amp; Collections Accountant</td>
-            <td class="xs">PACT</td><td>Month-end close checklist</td></tr>
-          <tr><td><strong>Payables and procurement</strong></td><td>Payables &amp; Procurement Accountant</td>
-            <td class="xs">PACT · bank portals</td><td>Journal register and approvals</td></tr>
-          <tr><td><strong>Cost control and work in progress</strong></td><td>Cost Control Accountant</td>
-            <td class="xs">PACT · Excel · Iskaan · iSupplier</td><td>Month-end close checklist</td></tr>
-          <tr><td><strong>General ledger and close</strong></td><td>General Ledger Accountant</td>
-            <td class="xs">PACT · Excel</td><td>Close calendar and blockers</td></tr>
-          <tr><td><strong>Fixed assets and payroll</strong></td><td>General Ledger Accountant</td>
-            <td class="xs">PACT · WPS</td><td>Balance sheet reconciliations</td></tr>
-          <tr><td><strong>Intercompany and consolidation</strong></td><td>Intercompany &amp; Tax Accountant</td>
-            <td class="xs">PACT</td><td>Balance sheet reconciliations</td></tr>
-          <tr><td><strong>Tax and statutory compliance</strong></td><td>Intercompany &amp; Tax Accountant</td>
-            <td class="xs">FTA portal · MoF · registrar</td><td>Corporate tax and VAT position</td></tr>
-          <tr><td><strong>Handover and service charge</strong></td><td>Property &amp; Handover Accountant</td>
-            <td class="xs">PACT · Mollak · Ejari · DEWA</td><td>Monthly cash flow</td></tr>
-          <tr><td><strong>Budget, forecast and feasibility</strong></td><td>Head of FP&amp;A</td>
-            <td class="xs">PACT · Excel</td><td>Budget against actual by entity</td></tr>
-          <tr><td><strong>Reporting and internal control</strong></td><td>Finance Director</td>
-            <td class="xs">All of the above</td><td>Consolidated statements to the CFO</td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="sm" style="margin-top:20px;max-width:74ch">
-        The pattern holds all the way down. A cash count sheet signed at the safe becomes the treasury
-        report, which becomes the group cash position, which becomes a line in the board pack. Every step
-        names its system, the document that must be attached, and the report above it.
-      </p>
-    </div>
-  </div>
-
-  <div class="sec-tight sec-sand">
-    <div class="wrap">
-      <div class="rulehead">
-        <h2 style="margin:0">Who reports to whom, and what each one holds</h2>
-        <p class="lede" style="margin-top:12px">Every position carries ten to twelve reports plus exactly
-          one audit report. The audit report only ever lists exceptions. Finance reports show the system
-          they come from in brackets. The Chairman's set is shown for real estate development; five of his
-          twelve change with the sector.</p>
-      </div>
-      <div class="tblscroll">
-      <table class="dt" style="min-width:900px">
-        <thead><tr><th style="width:20%">Position</th><th style="width:11%">Function</th><th>Reports held</th></tr></thead>
-        <tbody>
-          <tr><td style="padding-left:0px"><strong>Chairman</strong><br><span class="xs">Board level · the whole group</span></td><td>Governance</td><td>Group position statement · Escrow against cost to complete, by project · Group cash and liquidity · Bank facility, covenant headroom and maturity · Net sales and cancellations · Project pipeline and committed capital · Occupancy, rent roll and net operating income · Consolidated net asset value and valuation movement · Corporate tax and transfer pricing exposure · Related-party exposure · Shareholder and dividend position · Decisions requiring the board · <strong style="color:var(--flag)">AUDIT: Trust account and authority breaches</strong></td></tr>
-          <tr><td style="padding-left:0px"><strong>Audit Committee</strong><br><span class="xs">Board committee · findings, not operations</span></td><td>Governance</td><td>Internal audit plan against coverage · Findings by severity and age · Management responses overdue · External auditor report and management letter · Related-party transactions · Whistleblowing and investigation log · Regulatory correspondence · Fraud risk indicators · Control environment assessment · Audit fee and independence · <strong style="color:var(--flag)">AUDIT: Findings closed without evidence</strong></td></tr>
-          <tr><td style="padding-left:0px"><strong>CEO</strong><br><span class="xs">All eight companies · daily</span></td><td>Executive</td><td>Group position statement · Consolidated income statement · Budget against actual, group · Project portfolio summary · Revenue by company · Margin and trend · Sales pipeline and order book · Handover and delivery schedule · Company scorecard · Cash conversion by company · Headcount and people cost · Open decisions assigned to me · <strong style="color:var(--flag)">AUDIT: Exceptions unresolved past their deadline</strong></td></tr>
-          <tr><td style="padding-left:14px"><strong>CFO</strong><br><span class="xs">Consolidation, tax and controls</span></td><td>Finance</td><td>Group position statement · Consolidated income statement · Consolidated balance sheet · Consolidated cash flow · Consolidated net asset value · Group cash and liquidity · Budget against actual, group · Project portfolio summary · Corporate tax exposure · Intercompany matching and elimination · VAT return working <span class="xs">[FTA portal · PACT]</span> · Transfer pricing file · <strong style="color:var(--flag)">AUDIT: Control failures and unsupported entries</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Finance Director</strong><br><span class="xs">All eight companies · close and reporting</span></td><td>Finance</td><td>Group position statement · Consolidated income statement · Consolidated balance sheet · Budget against actual, group · Project portfolio summary · Close calendar and blockers · Management accounts by entity · Budget and reforecast · Thirteen-week cash forecast · Revenue recognition by project · Work in progress and capitalisation · Receivables and collection performance · <strong style="color:var(--flag)">AUDIT: Late, missing or restated numbers</strong></td></tr>
-          <tr><td style="padding-left:42px"><strong>Accounting Manager</strong><br><span class="xs">Cash, banks and controls, all entities</span></td><td>Finance</td><td>Group cash and bank position, all entities · Treasury safe spot check · Bank reconciliation review and approval · Progressive billing and payment certificate status · Petty cash policy compliance · Monthly cash flow · Bank facility and relationship status · Journal register and approvals <span class="xs">[PACT]</span> · Balance sheet reconciliations <span class="xs">[PACT · Excel]</span> · Payroll posting and WPS <span class="xs">[PACT · WPS file]</span> · Month-end close checklist <span class="xs">[PACT · Excel]</span> · <strong style="color:var(--flag)">AUDIT: Postings that failed a control test</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Treasury Accountant</strong><br><span class="xs">Cash, banks, cheques and wallets</span></td><td>Finance</td><td>Daily cash count and treasury safe <span class="xs">[PACT · cash count sheet]</span> · Petty cash voucher log <span class="xs">[PACT]</span> · Cheque register, issued and received <span class="xs">[PACT · bank portal]</span> · Bank deposit and withdrawal log <span class="xs">[Bank portal]</span> · Noqodi wallet top-up and reconciliation <span class="xs">[Noqodi portal]</span> · Cash transit between entities <span class="xs">[Manual log]</span> · Petty cash replenishment request <span class="xs">[PACT]</span> · Currency exchange log <span class="xs">[Manual log]</span> · Cash allocation by cost centre <span class="xs">[PACT]</span> · Bank facility drawdown and repayment schedule <span class="xs">[Bank portals]</span> · Unreceipted cash items <span class="xs">[PACT]</span> · <strong style="color:var(--flag)">AUDIT: Cash differences and undocumented vouchers</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Escrow &amp; Project Funds Accountant</strong><br><span class="xs">RERA escrow, drawdowns, project funding</span></td><td>Finance</td><td>Escrow account reconciliation by project <span class="xs">[ADIB · RAK portals]</span> · Escrow drawdown against engineer certificate <span class="xs">[ADIB · RAK escrow portals]</span> · Escrow balance against construction progress <span class="xs">[Escrow portals · PACT]</span> · Project funding requirement, thirteen weeks <span class="xs">[Excel · PACT]</span> · RERA escrow compliance file <span class="xs">[RERA · escrow portals]</span> · Oqood registration and DLD fee reconciliation <span class="xs">[DLD · Oqood portal]</span> · Retention account and release schedule <span class="xs">[PACT]</span> · Investor deposit and refund register <span class="xs">[PACT]</span> · Project bank account reconciliation <span class="xs">[Bank portals · PACT]</span> · Escrow auditor pack <span class="xs">[Escrow portals · PACT]</span> · Cash call by project <span class="xs">[Excel · PACT]</span> · <strong style="color:var(--flag)">AUDIT: Escrow drawn ahead of certified progress</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Receivables &amp; Collections Accountant</strong><br><span class="xs">SPA billing, payment plans, arrears</span></td><td>Finance</td><td>SPA billing schedule by payment plan <span class="xs">[PACT]</span> · Collections against payment plan <span class="xs">[PACT · bank statements]</span> · Arrears and overdue instalments <span class="xs">[PACT]</span> · Client statement of account <span class="xs">[PACT]</span> · Sales invoices issued against SPA <span class="xs">[PACT]</span> · Client receipts and allocation <span class="xs">[PACT · bank statement]</span> · Late penalty and administration fees <span class="xs">[PACT]</span> · Unit sales register and inventory <span class="xs">[PACT · Oqood]</span> · Cancellation and refund register <span class="xs">[PACT · DLD portal]</span> · Broker commission accrued and paid <span class="xs">[PACT]</span> · TAS file upload and portal submission <span class="xs">[TAS portal]</span> · <strong style="color:var(--flag)">AUDIT: Bookings without a signed SPA or know-your-customer file</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Payables &amp; Procurement Accountant</strong><br><span class="xs">Suppliers, subcontractors, orders</span></td><td>Finance</td><td>Supplier invoice booking <span class="xs">[PACT]</span> · Subcontractor payment run <span class="xs">[PACT · bank portal]</span> · Purchase order and goods receipt matching <span class="xs">[PACT]</span> · Payables ageing <span class="xs">[PACT]</span> · Supplier statement reconciliation <span class="xs">[PACT]</span> · Utility bill register <span class="xs">[PACT]</span> · Payment initiation and bank upload <span class="xs">[Bank portals · PACT]</span> · Advance to supplier and recovery <span class="xs">[PACT]</span> · Vendor master and bank detail changes <span class="xs">[PACT]</span> · Goods received not invoiced <span class="xs">[PACT]</span> · Petty cash cost allocation posting <span class="xs">[PACT]</span> · <strong style="color:var(--flag)">AUDIT: Payments without a matched order or goods receipt</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Cost Control Accountant</strong><br><span class="xs">IPC, WIP, variations, retention</span></td><td>Finance</td><td>Cost to complete by project <span class="xs">[PACT · Excel]</span> · Interim payment certificate validation <span class="xs">[PACT]</span> · Variation order register and valuation <span class="xs">[PACT · Excel]</span> · Work in progress schedule <span class="xs">[PACT · Excel]</span> · Retention held and released <span class="xs">[PACT]</span> · Budget against committed and spent <span class="xs">[PACT · Excel]</span> · Contingency drawdown <span class="xs">[PACT · Excel]</span> · Subcontractor account status <span class="xs">[PACT]</span> · Bill of quantities reconciliation <span class="xs">[Excel]</span> · Rate comparison against benchmark <span class="xs">[Excel]</span> · Final account status <span class="xs">[PACT · Excel]</span> · <strong style="color:var(--flag)">AUDIT: Work certified without supporting measurement</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>General Ledger Accountant</strong><br><span class="xs">Journals, close, fixed assets, payroll</span></td><td>Finance</td><td>Journal register and approvals <span class="xs">[PACT]</span> · Unposted and suspense items <span class="xs">[PACT]</span> · Balance sheet reconciliations <span class="xs">[PACT · Excel]</span> · Accrual and prepayment schedule <span class="xs">[PACT · Excel]</span> · Fixed asset register and depreciation <span class="xs">[PACT]</span> · Payroll posting and WPS <span class="xs">[PACT · WPS file]</span> · Trial balance review <span class="xs">[PACT]</span> · Bank reconciliation summary <span class="xs">[Bank portals · PACT]</span> · Month-end close checklist <span class="xs">[PACT · Excel]</span> · Provision and impairment schedule <span class="xs">[PACT · Excel]</span> · Document completeness check <span class="xs">[PACT]</span> · <strong style="color:var(--flag)">AUDIT: Postings that failed a control test</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Intercompany &amp; Tax Accountant</strong><br><span class="xs">Intercompany, VAT, Corporate Tax</span></td><td>Finance</td><td>Intercompany reconciliation across entities <span class="xs">[PACT]</span> · Management fee invoicing, parent to subsidiaries <span class="xs">[PACT]</span> · Intercompany recharge of cost and expense <span class="xs">[PACT]</span> · VAT input and output register <span class="xs">[PACT]</span> · VAT return working <span class="xs">[FTA portal · PACT]</span> · Corporate tax schedule by entity <span class="xs">[PACT · Excel]</span> · Related-party balance schedule <span class="xs">[PACT · Excel]</span> · Transfer pricing evidence file <span class="xs">[Excel]</span> · Group balance confirmation <span class="xs">[PACT]</span> · Economic substance and beneficial owner filings <span class="xs">[MoF · registrar portals]</span> · FTA correspondence and deadlines <span class="xs">[FTA portal]</span> · <strong style="color:var(--flag)">AUDIT: Intercompany balances that do not agree on both sides</strong></td></tr>
-          <tr><td style="padding-left:56px"><strong>Property &amp; Handover Accountant</strong><br><span class="xs">Handover, service charge, leases</span></td><td>Finance</td><td>Handover status and unit release <span class="xs">[PACT · DLD portal]</span> · Service charge budget and collection <span class="xs">[PACT · Mollak]</span> · Owners association fund reconciliation <span class="xs">[Mollak · PACT]</span> · Rent roll and lease register <span class="xs">[PACT · Ejari]</span> · Ejari registration compliance <span class="xs">[Ejari portal]</span> · Tenant arrears and ageing <span class="xs">[PACT]</span> · Utility and running cost per unit <span class="xs">[DEWA · PACT]</span> · Snagging and defect cost <span class="xs">[PACT · Excel]</span> · Post-handover warranty provision <span class="xs">[PACT · Excel]</span> · Unit handover documentation pack <span class="xs">[PACT · DLD portal]</span> · Vacant unit and occupancy report <span class="xs">[PACT]</span> · <strong style="color:var(--flag)">AUDIT: Units handed over without full settlement</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Head of Treasury</strong><br><span class="xs">Cash, banks, facilities and escrow</span></td><td>Finance</td><td>Daily cash position by bank · Thirteen-week cash forecast · Facility utilisation and headroom · Escrow balances by project · Covenant compliance · Interest and financing cost · Foreign exchange exposure and cover · Bank charges and fee review · Payment run authorisation · Deposit and investment schedule · <strong style="color:var(--flag)">AUDIT: Payments made outside the bank mandate</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Head of Tax</strong><br><span class="xs">VAT, Corporate Tax and transfer pricing</span></td><td>Finance</td><td>VAT return working <span class="xs">[FTA portal · PACT]</span> · VAT reconciliation to the ledger · Corporate tax computation · Free zone qualifying income test · Transfer pricing file and benchmarking · Related-party transaction register · Cross-border and withholding positions · Tax payments and refund status · FTA correspondence and deadlines <span class="xs">[FTA portal]</span> · Tax provision and deferred tax · <strong style="color:var(--flag)">AUDIT: Transactions with an unsupported tax treatment</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Head of FP&amp;A</strong><br><span class="xs">Budget, forecast and feasibility</span></td><td>Finance</td><td>Budget against actual by entity · Rolling reforecast · Project feasibility and return · Sales price and absorption assumptions · Cost inflation tracking · Scenario and sensitivity pack · Capital allocation and committed spend · KPI pack for the executive · Headcount plan against actual · Five-year group plan · <strong style="color:var(--flag)">AUDIT: Forecasts that missed beyond tolerance</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Property Management</strong><br><span class="xs">Department</span></td><td>&mdash;</td><td class="xs">Grouping. The positions below hold the reports.</td></tr>
-          <tr><td style="padding-left:42px"><strong>Property Manager</strong><br><span class="xs">One building · never a company</span></td><td>Entity &amp; site</td><td>Revenue and occupancy · Collection and ageing by tenant · Budget against spend · Open work orders · Lease contract and renewal schedule · Site scorecard · Service charge collection · Unit handover status · Snagging list · Utility and running cost per unit <span class="xs">[DEWA · PACT]</span> · <strong style="color:var(--flag)">AUDIT: Items on my site needing a decision</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Legal</strong><br><span class="xs">Department</span></td><td>&mdash;</td><td class="xs">Grouping. The positions below hold the reports.</td></tr>
-          <tr><td style="padding-left:42px"><strong>General Counsel &amp; Company Secretary</strong><br><span class="xs">Contracts, licences, board records</span></td><td>Control</td><td>Contract register and expiry · Trade licence and permit renewals · RERA and authority registrations · Escrow agreement compliance · Litigation and dispute status · Board and shareholder resolutions · Power of attorney register · Intercompany agreements in force · Insurance policy and claim status · Data and privacy obligations · <strong style="color:var(--flag)">AUDIT: Contracts signed outside the authority matrix</strong></td></tr>
-          <tr><td style="padding-left:42px"><strong>Head of Risk &amp; Compliance</strong><br><span class="xs">Risk register, AML and policy</span></td><td>Control</td><td>Group risk register · Customer screening status · Suspicious transaction reports · Know-your-customer file completeness · Politically exposed person exposure · Sanctions screening results · Policy exceptions granted · Business continuity test status · Regulatory deadline tracker · Training completion by entity · <strong style="color:var(--flag)">AUDIT: Transactions cleared without screening</strong></td></tr>
-          <tr><td style="padding-left:14px"><strong>COO</strong><br><span class="xs">The support functions</span></td><td>Operations</td><td>Operational scorecard · Service level performance · Utilisation and capacity · Headcount and vacancy by function · Support cost against budget · Vendor and subcontractor performance · System availability and incidents · Procurement savings delivered · Occupancy and unit availability · Health, safety and incidents · Open escalations to me · <strong style="color:var(--flag)">AUDIT: Support failures that reached a customer</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>HR Manager</strong><br><span class="xs">People across all eight</span></td><td>Operations</td><td>Headcount by entity · Visa and Emirates ID expiry · WPS submission status · Open roles and time to hire · Leave and end-of-service provision · Attrition and turnover · Training and licence renewals · Payroll cost against budget · Overtime and allowance analysis · Contract expiry and renewal · Emiratisation position · <strong style="color:var(--flag)">AUDIT: Payroll and residency compliance breaches</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>IT Manager</strong><br><span class="xs">Systems, data and access</span></td><td>Operations</td><td>Source system connection health · Overnight job status · Data completeness by entity · User access review · Licence and subscription register · Change and incident log · Backup and recovery status · Integration error queue · System cost by entity · Segregation of duties conflicts · <strong style="color:var(--flag)">AUDIT: Access and data integrity exceptions</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Operations Manager</strong><br><span class="xs">Day to day, every site</span></td><td>Operations</td><td>Open work orders and ageing · Service level breaches · Vendor and subcontractor status · Consumables and stock levels · Preventive maintenance plan · Incident and complaint log · Manpower deployment by site · Utility consumption and cost · Contract and maintenance renewal schedule · Site inspection results · <strong style="color:var(--flag)">AUDIT: Work orders past their deadline</strong></td></tr>
-          <tr><td style="padding-left:42px"><strong>Procurement Manager</strong><br><span class="xs">Tenders, vendors and contracts</span></td><td>Operations</td><td>Open purchase requisitions · Tender and award status · Approved vendor register · Price comparison and savings · Contract expiry and renewal · Subcontractor prequalification · Purchase orders against budget · Delivery and receipt exceptions · Vendor payment terms and ageing · Single-source and emergency buys · <strong style="color:var(--flag)">AUDIT: Awards made outside the approval matrix</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Marketing Manager</strong><br><span class="xs">Brand, campaigns and leads</span></td><td>Operations</td><td>Marketing spend against budget · Leads by channel and cost per lead · Campaign performance · Website and portal traffic · Enquiry to viewing conversion · Brand and content calendar · Agency and vendor performance · Social and public relations coverage · Marketing contribution to sales · Collateral and approval status · Event and launch schedule · <strong style="color:var(--flag)">AUDIT: Spend committed without an approved campaign</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Project Manager</strong><br><span class="xs">One project · never the portfolio</span></td><td>Operations</td><td>My project programme · Cost to complete · Variations pending approval · Consultant certification status · Subcontractor progress and payment · Material delivery schedule · Site inspection and quality · Snagging and defect list · Authority approval tracker · Site safety and incidents · <strong style="color:var(--flag)">AUDIT: Work certified without supporting evidence</strong></td></tr>
-          <tr><td style="padding-left:14px"><strong>Chief Commercial Officer</strong><br><span class="xs">Sales, leasing and marketing</span></td><td>Commercial</td><td>Sales by project and unit type · Booking to contract conversion · Collection against payment plan · Cancellation and refund register <span class="xs">[PACT · DLD portal]</span> · Agent and channel performance · Price list against the market · Leasing occupancy and renewal · Marketing spend against leads · Inventory available by project · Commission accrued and paid · Pipeline forecast · <strong style="color:var(--flag)">AUDIT: Discounts approved outside policy</strong></td></tr>
-          <tr><td style="padding-left:28px"><strong>Sales Manager</strong><br><span class="xs">Own pipeline and own book</span></td><td>Commercial</td><td>My pipeline by stage · Bookings this week · Collections due from my clients · Overdue payment plans · Units available to sell · Agent activity and conversion · Cancellations in my book · Commission earned and pending · Lead source performance · Client documentation complete · <strong style="color:var(--flag)">AUDIT: Bookings missing a signed contract or know-your-customer file</strong></td></tr>
-          <tr><td style="padding-left:14px"><strong>Entity General Manager</strong><br><span class="xs">One company · never the group</span></td><td>Entity &amp; site</td><td>My income statement · My cash position · Budget variance · Group charges received · Licence and filing due dates · Headcount and payroll cost · My receivables ageing · My payables and commitments · VAT position for my company · Corporate tax position for my company · My contracts and renewals · <strong style="color:var(--flag)">AUDIT: My open exceptions</strong></td></tr>
-        </tbody>
-      </table>
-      </div>
-      <p class="sm" style="margin-top:22px;max-width:74ch">
-        Each level adds three to four sector reports on top of the list above, to a maximum of ten.
-        Under Chairman, CEO and CFO the group is fully covered; the levels below are
-        opened as you want them.
-      </p>
-    </div>
-  </div>
-</section>
-
 <!-- ============ SOLUTION ============ -->
 <section class="page" id="page-solution">
 
   <div class="sec">
     <div class="wrap">
       <p class="kicker">The solution</p>
-      <h1>A layer above your accounting, not a replacement for it.</h1>
+      <h1 class="h1x">A layer above your accounting, not a replacement for it.</h1>
       <p class="lede" style="margin-top:20px">
         You have already paid for your systems and trained your people on them. Elite Path does
         not ask you to undo that. We sit above whatever you run — Tally, Zoho, QuickBooks, Sage,
@@ -1232,41 +785,41 @@ footer li{padding:4px 0}
       <div class="stack">
         <div class="stack-label">WHAT YOU RUN TODAY</div>
         <div class="srcgrid numgrid">
-          <div class="src" style="--c:#1a5fc0;--cs:#e9f1fd">
+          <div class="src glass" style="--c:#1a5fc0;--cs:#e9f1fd">
             <h5><i></i>Accounting &amp; ERP</h5>
             <div class="tags"><span>Tally</span><span>Zoho Books</span><span>QuickBooks</span>
               <span>Sage</span><span>Odoo</span><span>SAP</span><span>Oracle</span>
               <span>Microsoft Dynamics</span><span>NetSuite</span><span>Xero</span>
               <span>Focus</span><span>Peachtree</span><span class="more">and more</span></div>
           </div>
-          <div class="src" style="--c:#caa24e;--cs:#fbf5e6">
+          <div class="src glass" style="--c:#caa24e;--cs:#fbf5e6">
             <h5><i></i>Property &amp; assets</h5>
             <div class="tags"><span>Yardi</span><span>MRI</span><span>Ejari</span><span>Oqood</span>
               <span>Mollak</span><span>DLD portal</span><span>Escrow portals</span>
               <span>Lease registers</span><span>Snagging systems</span>
               <span>In-house systems</span><span class="more">and more</span></div>
           </div>
-          <div class="src" style="--c:#0c7b78;--cs:#e6f5f3">
+          <div class="src glass" style="--c:#0c7b78;--cs:#e6f5f3">
             <h5><i></i>HR &amp; payroll</h5>
             <div class="tags"><span>Bayzat</span><span>Zoho People</span><span>WPS files</span>
               <span>Attendance</span><span>Visa and licence registers</span><span>Emirates ID renewals</span>
               <span>End-of-service schedules</span><span>Payroll spreadsheets</span>
               <span class="more">and more</span></div>
           </div>
-          <div class="src" style="--c:#a83572;--cs:#fbeef4">
+          <div class="src glass" style="--c:#a83572;--cs:#fbeef4">
             <h5><i></i>Sales &amp; CRM</h5>
             <div class="tags"><span>Salesforce</span><span>HubSpot</span><span>Zoho CRM</span>
               <span>Unit sales trackers</span><span>Broker portals</span><span>Payment plan schedules</span>
               <span>Booking forms</span><span>Portal listings</span><span class="more">and more</span></div>
           </div>
-          <div class="src" style="--c:#0c8049;--cs:#e6f4ec">
+          <div class="src glass" style="--c:#0c8049;--cs:#e6f4ec">
             <h5><i></i>Banking &amp; treasury</h5>
             <div class="tags"><span>Bank statements</span><span>Online banking portals</span>
               <span>Escrow accounts</span><span>Payment files</span><span>Cheque registers</span>
               <span>Digital wallets</span><span>Facility schedules</span><span>Deposit schedules</span>
               <span class="more">and more</span></div>
           </div>
-          <div class="src" style="--c:#5b7bb5;--cs:#eef2fa">
+          <div class="src glass" style="--c:#5b7bb5;--cs:#eef2fa">
             <h5><i></i>Documents &amp; operations</h5>
             <div class="tags"><span>SharePoint</span><span>Google Drive</span><span>Email</span>
               <span>Excel</span><span>Contracts and invoices</span><span>Scanned PDFs</span>
@@ -1336,12 +889,18 @@ footer li{padding:4px 0}
              quality of what comes out of it.</p>
         </div>
         <ul class="ticks">
-          <li>Monthly close run to a published calendar, with the blockers visible daily</li>
-          <li>Group consolidation with intercompany elimination done automatically</li>
-          <li>Cash position across all entities and all banks, forecast thirteen weeks out</li>
-          <li>Board pack drafted from the live data, not rebuilt each quarter</li>
-          <li>Bank covenant and facility headroom watched continuously</li>
-          <li>Budget against actual by entity, project and building</li>
+          <li><strong>Cash-Flow Management</strong> — cash position across every entity and every bank,
+              forecast thirteen weeks out, with covenant and facility headroom watched continuously</li>
+          <li><strong>Budgeting &amp; Forecasting</strong> — budget against actual by entity, project and
+              building, re-forecast as the year moves rather than once at year end</li>
+          <li><strong>Group Dashboards</strong> — one live screen per role, from chairman to site manager,
+              and a board pack drafted from that same data instead of rebuilt each quarter</li>
+          <li><strong>Multi-entity Consolidation</strong> — consolidation across both parent levels with
+              intercompany elimination done automatically, agreed from both sides</li>
+          <li><strong>Finance Team Supervision</strong> — monthly close run to a published calendar with
+              the blockers visible daily, and your existing accountants supervised, not replaced</li>
+          <li><strong>Connect Your Existing Systems</strong> — read-only links to the accounting, property
+              and document systems you already run. Nothing is migrated and nothing is replaced</li>
         </ul>
       </div>
 
@@ -1489,183 +1048,13 @@ footer li{padding:4px 0}
 </section>
 
 <!-- ============ REAL ESTATE ============ -->
-<section class="page" id="page-realestate">
-
-  <div class="sec">
-    <div class="wrap">
-      <p class="kicker">Built for real estate groups</p>
-      <h1>A developer is never one company. It is eight, across two parent levels.</h1>
-      <p class="lede" style="margin-top:20px">
-        Land sits in one entity, the project is built in another, a third sells it, a fourth manages
-        it afterwards and a fifth maintains it. Each one bills the others. On paper it is a group.
-        In the accounts it is eight ledgers that only meet once a year, in a spreadsheet, under
-        pressure. This is the group we built for.
-      </p>
-    </div>
-  </div>
-
-  <div class="sec sec-sand">
-    <div class="wrap">
-      <div class="rulehead">
-        <h2 style="margin:0">The group, and where each company improves</h2>
-        <p class="lede" style="margin-top:12px">A trading parent at the top. Beneath it a real estate
-          holding company that owns the developer, the land and the buildings, and three trading companies
-          that sit alongside it. An illustrative structure, not a client's.</p>
-      </div>
-      <div class="tblscroll">
-      <table class="dt" style="min-width:900px">
-        <thead><tr><th style="width:20%">Company</th><th style="width:12%">Systems</th>
-          <th style="width:22%">What it does</th><th>Where profitability improves, and what we watch</th></tr></thead>
-        <tbody>
-          <tr><td><strong>Group Holding</strong><br><span class="xs">Top parent · trades</span></td>
-            <td class="xs">ERP · bank portals</td>
-            <td>Treasury, shared services, management fees. It has its own transactions, not just holdings.</td>
-            <td>Management fees charged to subsidiaries with no benchmarking behind them, and interest-free
-                funding to the developer. Both are transfer pricing exposures. We test each charge against an
-                arm's-length range and keep the evidence for the disclosure form.</td></tr>
-          <tr><td style="padding-left:14px"><strong>Real Estate Holding</strong><br><span class="xs">Second parent</span></td>
-            <td class="xs">ERP</td>
-            <td>Owns the developer, the land company and the property manager.</td>
-            <td>A second parent layer means two sets of eliminations, not one. Dividends and funding pass
-                through it and are easily double counted. We eliminate at both levels and reconcile the
-                bridge between them.</td></tr>
-          <tr><td style="padding-left:28px"><strong>Development Company</strong><br><span class="xs">Six live projects</span></td>
-            <td class="xs">ERP · escrow · DLD · Oqood · payment portal</td>
-            <td>Off-plan development, escrow accounts, SPA billing, handover.</td>
-            <td>Revenue recognised on cash collected rather than on certified progress. Escrow drawn ahead of
-                the engineer's certificate. Cost to complete that has stopped being credible. We track IFRS 15
-                against certified progress, project by project.</td></tr>
-          <tr><td style="padding-left:28px"><strong>Land Company</strong><br><span class="xs">Land bank</span></td>
-            <td class="xs">ERP</td>
-            <td>Holds the land. No trading income.</td>
-            <td>Plots moved to the developer at a value nobody can defend, creating either a taxable gain or
-                a future write-down. We flag every intragroup movement and hold the valuation basis with it.</td></tr>
-          <tr><td style="padding-left:28px"><strong>Property Management</strong><br><span class="xs">1,140 units</span></td>
-            <td class="xs">ERP · Ejari · Mollak · utilities</td>
-            <td>Leasing, tenants, service charge, owners' associations, handover.</td>
-            <td>Service charge money mixed with company money. Arrears that age quietly. Leases live in the
-                system but not in Ejari. Units handed over before full settlement. We watch collection against
-                budget per building and the expiry ladder twelve months out.</td></tr>
-          <tr><td style="padding-left:14px"><strong>Landscaping &amp; Contracting</strong><br><span class="xs">Sister company</span></td>
-            <td class="xs">ERP · client portals</td>
-            <td>Landscaping and fit-out, for the group and for outside clients.</td>
-            <td>Profit on internal work sits inside the developer's asset value and must be eliminated.
-                Invoices issued before the certificate is validated. Retention held past its release date.
-                We hold the work in progress schedule against certified valuations.</td></tr>
-          <tr><td style="padding-left:14px"><strong>Hospitality</strong><br><span class="xs">Sister company</span></td>
-            <td class="xs">Point of sale · ERP</td>
-            <td>Outlets, daily sales, inventory and card settlement.</td>
-            <td>Cash and card takings reconciled days late. Inventory purchased at prices nobody checks.
-                Card commission absorbed without review. We reconcile point of sale to the bank every day.</td></tr>
-          <tr><td style="padding-left:14px"><strong>Technical Services</strong><br><span class="xs">Sister company</span></td>
-            <td class="xs">ERP · work order system</td>
-            <td>Maintenance contracts and facilities work, mostly recharged inside the group.</td>
-            <td>Recharges at cost with no margin, which is a transfer pricing question, or with a margin nobody
-                documented. This is also where duplicate supplier invoices concentrate.</td></tr>
-        </tbody>
-      </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec">
-    <div class="wrap">
-      <div class="rulehead">
-        <h2 style="margin:0">Nine intercompany flows, matched every night</h2>
-        <p class="lede" style="margin-top:12px">Every one of these is a place where the group can
-          overstate itself, understate its tax, or fail an audit question. They are matched from both
-          sides, eliminated for the group view, and tested for arm's length.</p>
-      </div>
-      <table class="dt">
-        <thead><tr><th>From</th><th>To</th><th>Flow</th><th style="width:34%">What is tested</th></tr></thead>
-        <tbody>
-          <tr><td>Group Holding</td><td>All companies</td><td>Management and shared service fee</td><td>Arm's length basis, allocation key, documentation</td></tr>
-          <tr><td>Group Holding</td><td>Real Estate Holding</td><td>Funding and capital injection</td><td>Interest rate, thin capitalisation, elimination at both levels</td></tr>
-          <tr><td>Real Estate Holding</td><td>Development</td><td>Shareholder loan and cash call</td><td>Market interest rate, interest deductibility cap</td></tr>
-          <tr><td>Land Company</td><td>Development</td><td>Plot transfer</td><td>Valuation basis, gain on transfer, elimination</td></tr>
-          <tr><td>Landscaping</td><td>Development</td><td>Construction billing and work in progress</td><td>Unrealised profit in asset value, certification against billing</td></tr>
-          <tr><td>Technical Services</td><td>Property Management</td><td>Maintenance recharge</td><td>Margin on recharge, duplicate supplier invoices, contract coverage</td></tr>
-          <tr><td>Property Management</td><td>Group Holding</td><td>Collections swept to treasury</td><td>Separation of service charge funds, sweep authority</td></tr>
-          <tr><td>Development</td><td>Property Management</td><td>Handover and service charge setup</td><td>Settlement before handover, first-year budget basis</td></tr>
-          <tr><td>Hospitality</td><td>Group Holding</td><td>Daily takings swept</td><td>Point of sale to bank reconciliation, card commission</td></tr>
-          <tr><td>Real Estate Holding</td><td>Group Holding</td><td>Dividends and distributions</td><td>Participation exemption, double elimination across two levels</td></tr>
-          <tr><td>All companies</td><td>Group Holding</td><td>Cash pooling and intragroup settlement</td><td>Balance agreement both sides, interest on net position</td></tr>
-        </tbody>
-      </table>
-      <p class="xs" style="margin-top:14px">Eleven flow types shown. A second parent level means every flow through it is eliminated twice, which is where most hand-built consolidations go wrong.</p>
-    </div>
-  </div>
-
-  <div class="sec sec-ink">
-    <div class="wrap">
-      <div class="rulehead" style="border-color:var(--rule)">
-        <h2 style="margin:0">The UAE rules the system holds</h2>
-        <p class="lede" style="margin-top:12px">These are not reminders in a calendar. They are tests
-          that run against your actual transactions, every night.</p>
-      </div>
-      <div class="grid3">
-        <div>
-          <h3>Corporate Tax</h3>
-          <ul class="ticks">
-            <li>Nine percent above the AED 375,000 threshold, accrued monthly by entity</li>
-            <li>Small Business Relief eligibility tracked, not assumed</li>
-            <li>Free zone qualifying income and the de minimis limit, monitored live</li>
-            <li>Interest deductibility limitation</li>
-            <li>Group relief and tax group eligibility</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Transfer Pricing</h3>
-          <ul class="ticks">
-            <li>Arm's length testing on every related-party charge</li>
-            <li>Disclosure form evidence assembled through the year</li>
-            <li>Master file and local file thresholds tracked as revenue grows</li>
-            <li>Connected-person payments, including to owners and their relatives</li>
-          </ul>
-        </div>
-        <div>
-          <h3>VAT and other</h3>
-          <ul class="ticks">
-            <li>First supply of residential property, and the three-year window</li>
-            <li>Residential lease exempt, commercial standard-rated, mixed-use apportioned</li>
-            <li>Input VAT apportionment where supplies are mixed</li>
-            <li>Reverse charge on imported services and consultants</li>
-            <li>Economic substance and beneficial ownership filings by entity</li>
-            <li>IFRS 15, IAS 40 investment property and IFRS 16 leases</li>
-          </ul>
-        </div>
-      </div>
-      <p class="sm" style="margin-top:26px;max-width:72ch">
-        Tax law in the UAE is still moving. The rule library is maintained centrally and updated for
-        every client at once, so a change in guidance reaches your group in days rather than at the
-        next audit.
-      </p>
-    </div>
-  </div>
-
-
-
-  <div class="sec sec-sand">
-    <div class="wrap" style="text-align:center;max-width:720px">
-      <h2>Is your group built like this?</h2>
-      <p class="lede" style="margin:0 auto">If it is, we already know where the numbers go wrong.
-        If it is not, tell us how it is put together and we will tell you honestly whether we fit.</p>
-      <div class="btnrow" style="justify-content:center">
-        <a class="btn" href="#contact">Ask about your structure</a>
-        <a class="btn btn-ghost" href="#how">See how we work</a>
-      </div>
-    </div>
-  </div>
-
-</section>
-
 <!-- ============ HOW IT WORKS ============ -->
 <section class="page" id="page-how">
 
   <div class="sec">
     <div class="wrap">
       <p class="kicker">Our method</p>
-      <h1>Look first. Fix the process. Then automate.</h1>
+      <h1 class="h1x">Look first. Fix the process. Then automate.</h1>
       <p class="lede" style="margin-top:20px">
         Automating a broken process only makes it fail faster. So we do not start with the technology.
         We start by understanding how your finance function actually runs, and you approve each step
@@ -1794,7 +1183,7 @@ footer li{padding:4px 0}
   <div class="sec">
     <div class="wrap">
       <p class="kicker">About</p>
-      <h1>Elite Path Business Consultancy</h1>
+      <h1 class="h1x">Elite Path Business Consultancy</h1>
       <p class="lede" style="margin-top:20px">
         We have spent years inside UAE groups doing the work by hand — the consolidations, the
         intercompany chases, the audits that arrive too late to be useful. The dashboards exist
@@ -1857,7 +1246,7 @@ footer li{padding:4px 0}
     <div class="wrap grid2">
       <div>
         <p class="kicker">Contact</p>
-        <h1 style="font-size:clamp(2.1rem,4vw,3.1rem)">Tell us about your group.</h1>
+        <h1 class="h1x">Tell us about your group.</h1>
         <p class="lede" style="margin-top:18px">
           The most useful first message says how many legal entities you have, what systems they run on,
           and what you cannot currently see. We reply within one working day.
@@ -1867,20 +1256,14 @@ footer li{padding:4px 0}
           <p class="sm" style="margin:6px 0 0">Dubai, United Arab Emirates<br>
             <a href="mailto:info@elitepath.ae">info@elitepath.ae</a></p>
         </div>
-        <div style="margin-top:24px">
-          <h4>Prefer to start small?</h4>
-          <p class="sm" style="margin:6px 0 0">Ask for the Group Review. It is a fixed fee, it ends with a
-            report, and there is nothing to sign afterwards unless you want to continue.</p>
-        </div>
       </div>
 
       <div>
-        <form class="contact" action="https://formsubmit.co/hatem.shenawe@yahoo.com" method="POST">
-          <input type="hidden" name="_subject" value="New enquiry — Elite Path website">
-          <input type="hidden" name="_cc" value="info@elitepath.ae">
-          <input type="hidden" name="_next" value="https://elitepath.ae/?sent=1#contact">
+        <form class="contact" action="https://formsubmit.co/info@elitepath.ae" method="POST">
+          <input type="hidden" name="_subject" value="Elite Path AI — website enquiry (contact page)">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="Sent from" value="Contact page">
           <input type="text" name="_honey" style="display:none">
 
           <div class="field">
@@ -1899,38 +1282,11 @@ footer li{padding:4px 0}
             <label for="cphone">Phone</label>
             <input id="cphone" name="Phone" type="tel" autocomplete="tel">
           </div>
-          <div class="field">
-            <label for="csector">Sector</label>
-            <select id="csector" name="Sector">
-              <option>Real estate — development</option>
-              <option>Real estate — investment and management</option>
-              <option>Investment / holding company</option>
-              <option>Contracting</option>
-              <option>Trading and distribution</option>
-              <option>Retail and hospitality</option>
-              <option>Healthcare</option>
-              <option>Professional services</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="centities">How many legal entities?</label>
-            <select id="centities" name="Entities">
-              <option>1 – 10</option><option>11 – 20</option><option>More than 20</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="csize">Company size</label>
-            <select id="csize" name="Company size">
-              <option>1 – 25 employees</option><option>26 – 50</option><option>More than 50</option>
-            </select>
-          </div>
-          <div class="field">
+          <div class="field f-full">
             <label for="cmsg">What can you not currently see?</label>
             <textarea id="cmsg" name="Message" placeholder="Systems in use, what the group looks like, what triggered the search."></textarea>
           </div>
           <button class="btn" type="submit">Send enquiry</button>
-          <p class="xs" style="margin:0">We use what you send to reply to you. Nothing else.</p>
         </form>
       </div>
     </div>
@@ -1938,19 +1294,15 @@ footer li{padding:4px 0}
 
 </section>
 </main>
-
-
-
-
-
 <script>
-window.ELITE_PATH_BUILD = '49 AI Elite Path 2026 (31 August 2026)';
+window.ELITE_PATH_BUILD = '76 AI Elite Path 2026 (29 September 2026)';
 (function(){
-  var pages = ["home","reportinglines","solution","realestate","how","about","contact"];
+  var pages = ["home","solution","how","about","contact"];
   var alias = {services:"solution", pricing:"solution"};
   var navLinks = document.querySelectorAll('nav.main a[data-nav]');
   var navEl = document.getElementById('mainnav');
-  var navBtn = document.getElementById('navbtn');
+  var navBtn = document.getElementById('navbtn') ||
+    { setAttribute:function(){}, addEventListener:function(){} };
 
   function show(name){
     if(alias[name]) name = alias[name];
@@ -1965,9 +1317,7 @@ window.ELITE_PATH_BUILD = '49 AI Elite Path 2026 (31 August 2026)';
     var titles = {
       home:"Elite Path AI — Group Dashboards & AI Audit for UAE Businesses",
       solution:"Solution — Elite Path AI",
-      realestate:"Real Estate Groups — Elite Path AI",
-        how:"How We Work — Elite Path AI",
-      reportinglines:"Reporting Lines — Elite Path AI",
+      how:"How We Work — Elite Path AI",
       about:"About — Elite Path AI",
       contact:"Contact — Elite Path AI"
     };
@@ -2048,47 +1398,79 @@ window.ELITE_PATH_BUILD = '49 AI Elite Path 2026 (31 August 2026)';
 
 <footer>
   <div class="wrap">
-    <div class="fgrid">
+    <div class="fgrid" style="grid-template-columns:1fr">
       <div>
         <h4>Elite Path Business Consultancy</h4>
         <p style="max-width:34ch">Group dashboards and AI-checked assurance for UAE holding groups. Dubai, United Arab Emirates.</p>
         <p><a href="mailto:info@elitepath.ae">info@elitepath.ae</a></p>
       </div>
-      <div>
-        <h4>Solution</h4>
-        <ul>
-          <li><a href="#solution">What we do</a></li>
-          <li><a href="#how">How we work</a></li>
-          <li><a href="#reportinglines">Reporting lines</a></li>
-          <li><a href="#security">Security &amp; access</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Industries</h4>
-        <ul>
-          <li><a href="#realestate">Real estate groups</a></li>
-          <li><a href="#realestate">Investment &amp; holding</a></li>
-          <li><a href="#realestate">Contracting</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="#solution">What we do</a></li>
-          <li><a href="#reportinglines">Reporting lines</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#how">Our method</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
     </div>
+    <nav class="flinks" aria-label="All pages">
+      <a href="#solution">Solution</a>
+      <a href="#how">How We Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
     <div class="fbase">
       <span>© 2026 Elite Path Business Consultancy. All rights reserved.</span>
-      <span>Dashboard figures shown on this site are illustrative.</span>
-      <span>49 AI Elite Path 2026 · 31 August 2026</span>
     </div>
   </div>
 </footer>
 
+<script>
+/* ===== hero: rotating point cloud + header over hero ===== */
+(function(){
+  var cv=document.getElementById('heroCv');
+
+  function atHome(){var x=location.hash;return x===''||x==='#'||x==='#home';}
+
+  if(!cv || !cv.getContext) return;
+  var ctx=cv.getContext('2d');
+  var N=3400, P=new Float32Array(N*3);
+  for(var i=0;i<N;i++){
+    var k=i+0.5, phi=Math.acos(1-2*k/N), th=Math.PI*(1+Math.sqrt(5))*k, sp=Math.sin(phi);
+    P[i*3]=Math.cos(th)*sp; P[i*3+1]=Math.sin(th)*sp; P[i*3+2]=Math.cos(phi);
+  }
+  var w=1,h2=1,rot=0.6,raf=null;
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function size(){
+    var r=cv.getBoundingClientRect();
+    if(!r.width||!r.height) return false;
+    var dpr=Math.min(window.devicePixelRatio||1,2);
+    w=r.width; h2=r.height;
+    cv.width=Math.round(w*dpr); cv.height=Math.round(h2*dpr);
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    return true;
+  }
+  function draw(){
+    ctx.clearRect(0,0,w,h2);
+    var cx=w/2, cy=h2/2, R=Math.min(w,h2)*0.405;
+    var cs=Math.cos(rot), sn=Math.sin(rot), fill='';
+    for(var i=0;i<N;i++){
+      var x=P[i*3], y=P[i*3+1], z=P[i*3+2];
+      var X=x*cs - z*sn, Z=x*sn + z*cs;
+      var depth=(Z+1)*0.5;                 /* 0 far .. 1 near   */
+      var rim=1-(Z<0?-Z:Z);                /* 1 at the silhouette */
+      var a=(0.17+0.60*rim*rim)*(0.34+0.66*depth);
+      var s=0.7+1.3*depth;
+      var want = rim>0.855 ? '#1a5fc0' : '#9cc0ea';
+      if(want!==fill){ fill=want; ctx.fillStyle=want; }
+      ctx.globalAlpha=a;
+      ctx.fillRect(cx+X*R-s*0.5, cy+y*R-s*0.5, s, s);
+    }
+    ctx.globalAlpha=1;
+  }
+  function loop(){ rot+=0.0015; draw(); raf=requestAnimationFrame(loop); }
+  function start(){ if(raf||reduce||!atHome()||document.hidden) return; raf=requestAnimationFrame(loop); }
+  function stop(){ if(raf){ cancelAnimationFrame(raf); raf=null; } }
+
+  function boot(){ if(size()) draw(); }
+  window.addEventListener('resize',function(){ boot(); },{passive:true});
+  window.addEventListener('hashchange',function(){ atHome()?(boot(),start()):stop(); });
+  document.addEventListener('visibilitychange',function(){ document.hidden?stop():start(); });
+  boot(); start();
+})();
+</script>
 </body>
 </html>
